@@ -4,6 +4,7 @@ let happinessLevel;
 let energyLevel;
 
 function initializeStats() {
+    populationLevel = 100;
     foodLevel = 100;
     waterLevel = 100;
     happinessLevel = 100;
@@ -11,6 +12,7 @@ function initializeStats() {
 }
 
 function updateStats() {
+    document.getElementById('populationLevel').innerHTML = populationLevel;
     document.getElementById('waterLevel').innerHTML = waterLevel;
     document.getElementById('foodLevel').innerHTML = foodLevel;
     document.getElementById('happinessLevel').innerHTML = happinessLevel;
