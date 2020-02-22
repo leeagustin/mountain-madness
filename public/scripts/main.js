@@ -20,3 +20,7 @@ let config = {
 };
 
 let game = new Phaser.Game(config);
+
+function update() {
+    updateStats();
+}
