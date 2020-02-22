@@ -12,7 +12,6 @@ const pool = new Pool({
 app.use(express.static(path.join(__dirname, 'public')));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-app.get('/', (req, res) => res.render('pages/index'));
 app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
 app.get('/db', async (req, res) => {
     try {
@@ -27,3 +26,4 @@ app.get('/db', async (req, res) => {
     }
   });
   
+  app.get('/home', (req, res) => res.render('pages/home'));
