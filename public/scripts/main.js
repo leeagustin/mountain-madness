@@ -1,4 +1,4 @@
-let config={
+let config = {
     type: Phaser.AUTO,
     width: "100%",
     height: "100%",
@@ -6,11 +6,13 @@ let config={
         default: 'arcade',
         arcade: {
             //debug: true,
-            gravity: { y: 0 }
+            gravity: {
+                y: 0
+            }
 
         }
     },
-    scene:{
+    scene: {
         preload: preload,
         create: create,
         update: update
