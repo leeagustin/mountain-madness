@@ -9,3 +9,4 @@ app.set('view engine', 'ejs');
 app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
 app.get('/', (req, res) => res.redirect('home'));
 app.get('/home', (req, res) => res.render('pages/home'));
+app.get('/title', (req, res) => res.render('pages/title'));
