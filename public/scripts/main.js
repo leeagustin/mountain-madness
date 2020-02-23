@@ -45,4 +45,7 @@ function updateEveryFrame() {
         'Happiness: ' + happinessLevel + '\n' +
         'Energy: ' + currentEnergyLevel + ' (Need ' + requiredEnergyLevel + ')'
     );
+
+    WINDOW_WIDTH = window.innerWidth * 0.985;
+    WINDOW_HEIGHT = window.innerHeight * 0.97;
 }
