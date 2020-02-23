@@ -33,19 +33,18 @@ function create() {
     waterTextbox = this.add.text(170, 60, ' ', {
         font: WINDOW_HEIGHT * 0.045 + 'px sans-serif'
     }); 
-    
-    waterWarningbox = this.add.text(165, 60, ' ', {
-        font: WINDOW_HEIGHT * 0.045 + 'px sans-serif',
-        fill: "red"
-    });
 
     metalTextbox = this.add.text(170, 122, ' ', {
         font: WINDOW_HEIGHT * 0.045 + 'px sans-serif',
     });
 
-
     foodTextbox = this.add.text(170, 91, ' ', {
         font: WINDOW_HEIGHT * 0.045 + 'px sans-serif',
+    });
+
+    waterWarningbox = this.add.text(165, 60, ' ', {
+        font: WINDOW_HEIGHT * 0.045 + 'px sans-serif',
+        fill: "red"
     });
 
     foodWarningbox = this.add.text(165, 91, ' ', {
