@@ -8,7 +8,7 @@ let config = {
     scene: {
         preload: preload,
         create: create,
-        update: update
+        update: updateEveryFrame
     }
 };
 
@@ -63,6 +63,6 @@ function create() {
     createEngineer();
 }
 
-function update() {
+function updateEveryFrame() {
     statsTextbox.setText(`Population: ${populationLevel} (Engineers: ${engineers})\nWater: ${waterLevel}\nFood: ${foodLevel}\nMetal: ${metalLevel}\nHappiness: ${happinessLevel}\nCurrent Energy: ${currentEnergyLevel}\nRequired Energy: ${requiredEnergyLevel}`);
 }
