@@ -1,5 +1,6 @@
 let foodHarvestingRate = 20;
 let waterHarvestingRate = 48;
+let metalHarvestingRate = 50;
 let harvestingFood = false;
 let harvestingWater = false;
 let harvestingMetal = false;
@@ -32,7 +33,7 @@ function harvestMetal() {
     
     harvestingMetal = true;
     setTimeout(() => {
-        metalLevel += 50;
+        metalLevel += metalHarvestingRate;
         harvestingMetal = false;
-    }, 15);
+    }, 15000);
 }
