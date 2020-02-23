@@ -37,8 +37,9 @@ img {
 .alert {
     left: 0;
     display: inline-flex;
-    width: 20%;
+    width: 25%;
     visibility: hidden;
+    margin-left: 2%;
 }
 
 .alert .tooltiptext {
@@ -119,6 +120,7 @@ p#label {
     opacity: 0;
     transition: .5s ease;
     background-color: grey;
+    border-radius: 5%;
 }
 
 .container:hover .overlay {
