@@ -1,5 +1,7 @@
 let oneUpSound = new Audio('sounds/1up.wav');
 
+let isWaterLeaking = false;
+
 function initializeRandomEventGenerator() {
     setTimeout(() => {
         initializeRandomEventGenerator();
@@ -8,11 +10,11 @@ function initializeRandomEventGenerator() {
         waterLeakage();
     }, 6000);
 }
-
 function waterLeakage() {
-    if (Math.random() < 0.03) {
-        waterRateModifier += 0.5;
+    if (Math.random() < 0.03 && !isWaterLeaking) {
+        waterRateModifier += 1;
         showEventText('Your water storage has suffered a leakage!');
+        isWaterLeaking = true;
     }
 }
 
