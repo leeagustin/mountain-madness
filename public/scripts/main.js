@@ -27,15 +27,29 @@ function preload() {
 function create() {
     // buttons
     this.add.image(WINDOW_WIDTH * 0.1, WINDOW_HEIGHT * 0.4, "panel").setOrigin(0.9,1)
-
     statsTextbox = this.add.text(30, 30, ' ', {
         font: WINDOW_HEIGHT * 0.045 + 'px sans-serif',
         fill: "#FFFFFF"
     });
 
+    waterTextbox = this.add.text(170, 60, ' ', {
+        font: WINDOW_HEIGHT * 0.045 + 'px sans-serif',
+        fill: "red"
+    }); 
+
+    metalTextbox = this.add.text(170, 122, ' ', {
+        font: WINDOW_HEIGHT * 0.045 + 'px sans-serif',
+        fill: "red"
+    }); 
+
+    foodTextbox = this.add.text(170, 91, ' ', {
+        font: WINDOW_HEIGHT * 0.045 + 'px sans-serif',
+        fill: "red"
+    }); 
+
+    
 
     eventsTextBox = this.add.text(WINDOW_WIDTH * 0.6, WINDOW_HEIGHT / 2, '', {
-        background: "#FFFFFF",
         font: WINDOW_HEIGHT * 0.07 + 'px sans-serif',
         fill: '#FFFFFF'
     }).setOrigin(0.5);
@@ -43,6 +57,7 @@ function create() {
     initializeStats();
     initializeRandomEventGenerator();
     createEngineer();
+    displayAddedFood()
 }
 
 function displayAnnouncement(msg) {
@@ -63,4 +78,25 @@ function updateEveryFrame() {
         'Happiness: ' + happinessLevel + '\n' +
         'Energy: ' + currentEnergyLevel + ' (Need ' + requiredEnergyLevel + ')'
     );
+}
+
+function displayAddedWater(){
+    waterTextbox.setText('+' + waterHarvestingRate);
+    setTimeout(() => {
+        waterTextbox.setText( " ");
+    }, 1000);
+}
+
+function displayAddedMetal(){
+    metalTextbox.setText('+' + metalHarvestingRate);
+    setTimeout(() => {
+        metalTextbox.setText( " ");
+    }, 1000);
+}
+
+function displayAddedFood(){
+    foodTextbox.setText('+' + foodHarvestingRate);
+    setTimeout(() => {
+        foodTextbox.setText( " ");
+    }, 1000);
 }

@@ -14,7 +14,7 @@ function harvestFood() {
   setTimeout(() => {
     foodLevel += foodHarvestingRate;
     harvestingFood = false;
-    displayResults();
+    displayAddedFood();
   }, 10000);
 }
 
@@ -30,7 +30,9 @@ function harvestWater() {
   setTimeout(() => {
     waterLevel += waterHarvestingRate;
     harvestingWater = false;
+    displayAddedWater();
   }, 13000);
+
 }
 
 function harvestMetal() {
@@ -41,6 +43,7 @@ function harvestMetal() {
   setTimeout(() => {
     metalLevel += metalHarvestingRate;
     harvestingMetal = false;
+    displayAddedMetal();
   }, 15000);
 
 }
@@ -92,7 +95,7 @@ function moveMetalProgressBar() {
 function moveWaterProgressBar() {
   var elem = document.getElementById("waterProgress");
   var width = 1;
-  var id = setInterval(frame, 240);
+  var id = setInterval(frame, 130);
 
   function frame() {
     if (width >= 100) {
