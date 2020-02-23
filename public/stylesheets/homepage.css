@@ -58,7 +58,7 @@ img#farm{
 #myProgress {
     display: inline-block;
     position: absolute;
-    width: 40vh;
+    width: 2vh;
     height: 2vh;
     background-color: grey;
     left: 10%;
