@@ -1,9 +1,13 @@
 function harvestFood() {
-    foodLevel += 100;
+    setTimeout(() => {
+        foodLevel += 20;
+    }, 10000);
 }
 
 function harvestWater() {
-    waterLevel += 100;
+    setTimeout(() => {
+        waterLevel += 48;
+    }, 24000);
 }
 
 function harvestMetal() {

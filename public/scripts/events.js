@@ -17,6 +17,13 @@ function ratsAteFoodSupply() {
     }
 }
 
+function createEngineer() {
+    setTimeout(() => {
+        createEngineer();
+    }, 30000);
+    engineers += 1;
+}
+
 function showEventText(msg) {
     eventsTextBox.setText(`Event: ${msg}`);
     setTimeout(() => {

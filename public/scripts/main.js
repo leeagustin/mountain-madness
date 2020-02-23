@@ -21,19 +21,34 @@ function preload() {}
 function create() {
     initializeStats();
     // buttons
-    const foodButton = this.add.text(170, 52, 'Food', { font: '20px Arial', fill: '#0f0' });
+    const foodButton = this.add.text(170, 52, 'Food', {
+        font: '20px Arial',
+        fill: '#0f0'
+    });
     foodButton.setInteractive();
-    foodButton.on('pointerdown', () => { setTimeout(harvestFood, 3000); });
-    
-    const waterButton = this.add.text(170, 31, 'Water', { font: '20px Arial', fill: '#0f0' });
+    foodButton.on('pointerdown', () => {
+        harvestFood();
+    });
+
+    const waterButton = this.add.text(170, 31, 'Water', {
+        font: '20px Arial',
+        fill: '#0f0'
+    });
     waterButton.setInteractive();
-    waterButton.on('pointerdown', () => { setTimeout(harvestWater, 3000); });
-    
-    const metalButton = this.add.text(170, 73, 'Metal', { font: '20px Arial', fill: '#0f0' });
+    waterButton.on('pointerdown', () => {
+        harvestWater();
+    });
+
+    const metalButton = this.add.text(170, 73, 'Metal', {
+        font: '20px Arial',
+        fill: '#0f0'
+    });
     metalButton.setInteractive();
-    metalButton.on('pointerdown', () => { setTimeout(harvestMetal, 3000); });
-    
-    
+    metalButton.on('pointerdown', () => {
+        setTimeout(harvestMetal, 3000);
+    });
+
+
     statsTextbox = this.add.text(10, 10, '', {
         font: '20px Arial',
         fill: '#FFFFFF'
@@ -47,5 +62,5 @@ function create() {
 
 function update() {
     createRandomEvent();
-    statsTextbox.setText(`Population: ${populationLevel}\nWater: ${waterLevel}\nFood: ${foodLevel}\nMetal: ${metalLevel}\nHappiness: ${happinessLevel}\nEnergy: ${energyLevel}`);
+    statsTextbox.setText(`Population: ${populationLevel}\nWater: ${waterLevel}\nFood: ${foodLevel}\nMetal: ${metalLevel}\nHappiness: ${happinessLevel}\nCurrent Energy: ${currentEnergyLevel}\nRequired Energy: ${requiredEnergyLevel}`);
 }
