@@ -59,8 +59,9 @@ function create() {
 
     eventsTextbox = this.add.text(WINDOW_WIDTH * 0.6, WINDOW_HEIGHT / 4, '', {
         font: WINDOW_HEIGHT * 0.08 + 'px sans-serif',
-        fill: '#FFFFFF'
-    }).setOrigin(0.5);
+        fill: '#FFFFFF',
+        backgroundColor: '#18181A'
+    }).setOrigin(0.5).setPadding();
 
     initializeStats();
     initializeRandomEventGenerator();
@@ -68,11 +69,11 @@ function create() {
 }
 
 function displayAnnouncement(msg) {
-    eventsTextbox.setText(msg);
+    eventsTextbox.setText(msg).setPadding(WINDOW_HEIGHT * 0.02);
     oneUpSound.loop = false;
     oneUpSound.play();
     setTimeout(() => {
-        eventsTextbox.setText('');
+        eventsTextbox.setText('').setPadding();
     }, 3000);
 }
 
