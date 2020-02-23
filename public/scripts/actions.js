@@ -110,3 +110,21 @@ function moveWaterProgressBar() {
     }
   }
 }
+
+function fixFoodSpoiling() {
+    if (engineers >= 1) {
+        foodRateModifier -= 1;
+        isFoodSpoiling = false;
+        engineers -= 1;
+        // disable food spoiling alert icon
+    }
+}
+
+function fixWaterLeakage() {
+    if (engineers >= 1) {
+        waterRateModifier -= 1;
+        isWaterLeaking = false;
+        engineers -= 1;
+        // disable water leakage alert icon
+    }
+}

@@ -67,13 +67,6 @@ img {
     background-color: cornflowerblue;
 }
 
-div#lab {
-    display: inline-block;
-    width: 10vh;
-    height: 40vh;
-    position: relative;
-}
-
 p#label {
     font-size: 18pt;
     font-family: 'Times New Roman', Times, serif;
@@ -103,6 +96,7 @@ p#label {
     opacity: 0.75;
   }
 
+<<<<<<< HEAD
 .container_up:hover .overlay {
     opacity: 0.75;
   }
@@ -145,13 +139,6 @@ span#myPopup{
 	bottom: 10%;
 	left: 10%;
   }
+=======
+>>>>>>> 7e578df0c98e44b2b65bea0f964d50ce20678c09
 
-div#lab{
-    display: inline-block;
-    width: 10vh;
-    height: 40vh;
-    position: absolute;
-	bottom: 10%;
-	left: 10%;
-}
-*/

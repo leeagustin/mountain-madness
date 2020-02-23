@@ -1,19 +1,20 @@
 let oneUpSound = new Audio('sounds/1up.wav');
 
-let isWaterLeaking = false;
 let isFoodSpoiling = false;
+let isWaterLeaking = false;
 
 function initializeRandomEventGenerator() {
     setTimeout(() => {
         initializeRandomEventGenerator();
         asteroidHitWaterSupply();
         ratsAteFoodSupply();
+        foodSpoilage();
         waterLeakage();
     }, 6000);
 }
 
 function foodSpoilage() {
-    if (Math.random() < 0.03 && !isFoodSpoiling) {
+    if (Math.random() < 0.01 && !isFoodSpoiling) {
         foodRateModifier += 1;
         displayAnnouncement('Event: Your food is spoiling!');
         isFoodSpoiling = true;
@@ -21,7 +22,7 @@ function foodSpoilage() {
 }
 
 function waterLeakage() {
-    if (Math.random() < 0.03 && !isWaterLeaking) {
+    if (Math.random() < 0.01 && !isWaterLeaking) {
         waterRateModifier += 1;
         displayAnnouncement('Event: Your water storage has suffered a leakage!');
         isWaterLeaking = true;
