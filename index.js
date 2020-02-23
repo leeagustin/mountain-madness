@@ -10,3 +10,4 @@ app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
 app.get('/', (req, res) => res.redirect('title'));
 app.get('/home', (req, res) => res.render('pages/home'));
 app.get('/title', (req, res) => res.render('pages/title'));
+app.get('/gameover', (req, res) => res.render('pages/gameover'));
