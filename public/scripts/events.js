@@ -11,7 +11,7 @@ function initializeRandomEventGenerator() {
     }, 6000);
 }
 function waterLeakage() {
-    if (Math.random() < 0.3 && !isWaterLeaking) {
+    if (Math.random() < 0.03 && !isWaterLeaking) {
         waterRateModifier += 1;
         showEventText('Your water storage has suffered a leakage!');
         isWaterLeaking = true;

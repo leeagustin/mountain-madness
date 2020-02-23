@@ -11,6 +11,7 @@ function harvestFood() {
     if (harvestingFood)
         return;
     harvestingFood = true;
+    moveFarmProgressBar();
     setTimeout(() => {
         foodLevel += foodHarvestingRate;
         harvestingFood = false;
@@ -22,6 +23,7 @@ function harvestWater() {
     if (harvestingWater)
         return;
     harvestingWater = true;
+    moveWaterProgressBar();
     setTimeout(() => {
         waterLevel += waterHarvestingRate;
         harvestingWater = false;
@@ -32,6 +34,7 @@ function harvestMetal() {
     if (harvestingMetal)
         return;
     harvestingMetal = true;
+    moveMetalProgressBar();
     setTimeout(() => {
         metalLevel += metalHarvestingRate;
         harvestingMetal = false;
@@ -46,7 +49,7 @@ function moveFarmProgressBar(){
     i = 1;
     var elem = document.getElementById("farmBar");
     var width = 1;
-    var id = setInterval(frame, 10);
+    var id = setInterval(frame, 100);
     function frame() {
       if (width >= 100) {
         clearInterval(id);
@@ -68,7 +71,7 @@ function moveMetalProgressBar(){
       var width = 1;
       var id = setInterval(frame, 150);
       function frame() {
-        if (width >= 150) {
+        if (width >= 100) {
           clearInterval(id);
           i = 0;
           elem.style.width = 0;
