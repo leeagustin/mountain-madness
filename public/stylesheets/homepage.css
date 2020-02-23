@@ -16,7 +16,6 @@ canvas {
 img {
     position: relative;
     width: 100%;
-    padding-bottom: 2vh;
 }
 
 .actions-container {
@@ -42,6 +41,8 @@ img {
     height: 2vh;
     border-radius: 1vh;
     background-color: grey;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
 }
 
 #farmProgress {
@@ -79,18 +80,18 @@ p#label {
 }
 
 img#upgradeWater {
-    width: 5vh;
-    height: 5vh;
+    width: 10vh;
+    height: 10vh;
 }
 
 img#upgradeFood {
-    width: 5vh;
-    height: 5vh;
+    width: 10vh;
+    height: 10vh;
 }
 
 img#upgradeMetal {
-    width: 5vh;
-    height: 5vh;
+    width: 10vh;
+    height: 10vh;
 }
 
 
