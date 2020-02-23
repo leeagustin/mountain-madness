@@ -36,6 +36,11 @@ function updateStats() {
 function updateFoodAndWater() {
     waterLevel -= Math.floor(populationLevel / 1000);
     foodLevel -= Math.floor(populationLevel / 1000);
+
+    if (waterLevel < 0)
+        waterLevel = 0;
+    if (foodLevel < 0)
+        foodLevel = 0;
 }
 
 function updatePopulation() {
