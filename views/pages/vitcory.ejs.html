@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html onclick="startMusic()">
+
+<script src="/scripts/buttonclick.js" defer></script>
+
+<script>
+    let playing = false;
+
+    function startMusic() {
+        if (!playing) {
+            playing = true;
+            let scriptTag = document.createElement('script');
+            scriptTag.setAttribute('src', 'scripts/music.js');
+            document.head.appendChild(scriptTag);
+        }
+    }
+</script>
+
+<style>
+    html {
+        background-image: url("../images/victory.jpeg");
+        background-position: 50% 70%;
+        height: 100%;
+        text-align: center;
+    }
+
+    body {
+        margin-top: 15%;
+    }
+
+    h1 {
+        color: white;
+        font-size: 20vh;
+    }
+
+    input {
+        background-color: burlywood;
+        color: white;
+        font-size: 7vh;
+        font-family: "Trebuchet MS", Helvetica, sans-serif;
+        border-radius: 10vh;
+        border-style: hidden;
+        margin-top: -10vh;
+        padding: 4vh 6vh 4vh 6vh;
+    }
+</style>
+
+<body>
+    <h1>VICTORY!</h1>
+    <form action="/home" method="get">
+        <input onclick="playButtonClick()" type="submit" value="TRY AGAIN?">
+    </form>
+</body>
+
+</html>
