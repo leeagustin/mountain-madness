@@ -9,7 +9,7 @@ body {
 canvas {
     position: absolute;
     left: 1vh;
-    top: 0vh;
+    top: 1vh;
     z-index: 0;
 }
 
