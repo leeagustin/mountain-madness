@@ -18,6 +18,9 @@ function foodSpoilage() {
         foodRateModifier += 1;
         displayAnnouncement('Event: Your food is spoiling!');
         isFoodSpoiling = true;
+
+        var alert = document.getElementById("foodSpoilageAlert");
+        alert.style.visibility = "visible"
     }
 }
 
@@ -26,6 +29,9 @@ function waterLeakage() {
         waterRateModifier += 1;
         displayAnnouncement('Event: Your water storage has suffered a leakage!');
         isWaterLeaking = true;
+
+        var alert = document.getElementById("waterLeakageAlert");
+        alert.style.visibility = "visible"
     }
 }
 

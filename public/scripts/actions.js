@@ -116,7 +116,9 @@ function fixFoodSpoiling() {
         foodRateModifier -= 1;
         isFoodSpoiling = false;
         engineers -= 1;
-        // disable food spoiling alert icon
+
+        var alert = document.getElementById("foodSpoilageAlert");
+        alert.style.visibility = "hidden";
     }
 }
 
@@ -125,6 +127,8 @@ function fixWaterLeakage() {
         waterRateModifier -= 1;
         isWaterLeaking = false;
         engineers -= 1;
-        // disable water leakage alert icon
+
+        var alert = document.getElementById("waterLeakageAlert");
+        alert.style.visibility = "hidden";
     }
 }
