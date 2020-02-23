@@ -27,7 +27,7 @@ function create() {
     });
 
     eventsTextBox = this.add.text(WINDOW_WIDTH / 2, WINDOW_HEIGHT / 6, '', {
-        font: '50px Arial',
+        font: '40px Arial',
         fill: '#FFFFFF'
     }).setOrigin(0.5);
 
@@ -45,7 +45,4 @@ function updateEveryFrame() {
         'Happiness: ' + happinessLevel + '\n' +
         'Energy: ' + currentEnergyLevel + ' (Need ' + requiredEnergyLevel + ')'
     );
-
-    WINDOW_WIDTH = window.innerWidth * 0.985;
-    WINDOW_HEIGHT = window.innerHeight * 0.97;
 }
