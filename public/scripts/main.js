@@ -34,7 +34,8 @@ function create() {
     });
 
 
-    eventsTextBox = this.add.text(WINDOW_WIDTH * 0.6, WINDOW_HEIGHT / 4, '', {
+    eventsTextBox = this.add.text(WINDOW_WIDTH * 0.6, WINDOW_HEIGHT / 2, '', {
+        background: "#FFFFFF",
         font: WINDOW_HEIGHT * 0.07 + 'px sans-serif',
         fill: '#FFFFFF'
     }).setOrigin(0.5);
