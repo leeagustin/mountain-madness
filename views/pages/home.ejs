@@ -45,6 +45,7 @@
 <body onmouseover="startTimer()">
     <div class="actions-container">
 
+
         <div class="action">
             <div class="container" onclick="harvestFood(); playButtonClick();">
                 <img src="images/farm.png">
@@ -90,12 +91,13 @@
                         <div class="text_up">Upgrade</div>
                     </div>
                 </div>
+                <div class="container_up" onclick="upgradeEnergy(); playButtonClick();">
+                        <img src="images/energy.png">
+                        <div class="overlay">
+                                <div class="text_up">Increase Energy Cap</div>
+                        </div>
+                    </div>
             </div>
-            <div class="alert">
-                    <img id="foodSpoilageAlert" src="images/energy.png"
-                        onclick="fixFoodSpoiling(); playButtonClick();"><br>
-                    <span class="tooltiptext">Fix the Food Spoilage issue. Costs 1 Engineer</span>
-                </div>
         
         </div>
 
