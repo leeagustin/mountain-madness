@@ -1,27 +1,31 @@
 {
   "name": "mountain-madness",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.3.0",
+  "description": "Mountain Madness",
+  "engines": {
+    "node": "12.x"
+  },
   "main": "index.js",
   "scripts": {
     "game": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "nodemon test.js"
+  },
+  "dependencies": {
+    "ejs": "^2.5.6",
+    "express": "^4.15.2"
+  },
+  "devDependencies": {
+    "request": "^2.81.0",
+    "tape": "^4.7.0"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/leeagustin/mountain-madness.git"
   },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.16.4"
-  },
-  "bugs": {
-    "url": "https://github.com/leeagustin/mountain-madness/issues"
-  },
-  "homepage": "https://github.com/leeagustin/mountain-madness#readme",
-  "devDependencies": {
-    "eslint": "^6.8.0",
-    "nodemon": "^2.0.2"
-  }
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
+  "license": "MIT"
 }
