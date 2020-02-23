@@ -20,7 +20,20 @@ function preload() {}
 
 function create() {
     initializeStats();
-
+    // buttons
+    const foodButton = this.add.text(100, 100, 'Food', { fill: '#0f0' });
+    foodButton.setInteractive();
+    foodButton.on('pointerdown', () => { setTimeout(harvestFood, 3000); });
+    
+    const waterButton = this.add.text(100, 100, 'Water', { fill: '#0f0' });
+    waterButton.setInteractive();
+    waterButton.on('pointerdown', () => { setTimeout(harvestWater, 3000); });
+    
+    const metalButton = this.add.text(100, 100, 'Metal', { fill: '#0f0' });
+    metalButton.setInteractive();
+    metalButton.on('pointerdown', () => { setTimeout(harvestMetal, 3000); });
+    
+    
     statsTextbox = this.add.text(10, 10, '', {
         font: '20px Arial',
         fill: '#FFFFFF'
