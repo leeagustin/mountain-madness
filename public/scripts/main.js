@@ -1,7 +1,7 @@
 let config = {
     type: Phaser.AUTO,
-    width: 100,
-    height: 100,
+    width: window.innerWidth * 0.985,
+    height: window.innerHeight * 0.97,
     physics: {
         default: 'arcade',
         arcade: {
@@ -20,13 +20,21 @@ let config = {
 };
 
 let game = new Phaser.Game(config);
+let statsTextbox;
 
 function preload() {
-    initializeStats();
+    this.load.image('bg', )
 }
 
-function create() {}
+function create() {
+    initializeStats();
+
+    statsTextbox = this.add.text(10, 10, '', {
+        font: '20px Arial',
+        fill: '#FFFFFF'
+    });
+}
 
 function update() {
-    updateStats();
+    statsTextbox.setText(`Population: ${populationLevel}\nWater: ${waterLevel}\nFood: ${foodLevel}\nHappiness: ${happinessLevel}\nEnergy: ${energyLevel}`);
 }
