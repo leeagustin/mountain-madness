@@ -51,7 +51,7 @@ function create() {
         fill: "#FFFFFF"
     });
 
-    eventsTextbox = this.add.text(WINDOW_WIDTH * 0.6, WINDOW_HEIGHT / 2, '', {
+    eventsTextbox = this.add.text(WINDOW_WIDTH * 0.6, WINDOW_HEIGHT / 4, '', {
         font: WINDOW_HEIGHT * 0.07 + 'px sans-serif',
         fill: '#FFFFFF'
     }).setOrigin(0.5);
