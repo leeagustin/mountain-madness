@@ -31,16 +31,37 @@ function create() {
     });
 
     waterTextbox = this.add.text(170, 60, ' ', {
+<<<<<<< HEAD
         font: WINDOW_HEIGHT * 0.045 + 'px sans-serif',
+=======
+<<<<<<< HEAD
+        font: WINDOW_HEIGHT * 0.045 + 'px sans-serif',
+        fill: "green"
+    }); 
+    
+    waterWarningbox = this.add.text(165, 60, ' ', {
+        font: WINDOW_HEIGHT * 0.045 + 'px sans-serif',
+        fill: "red"
+    }); 
+=======
+        font: WINDOW_HEIGHT * 0.045 + 'px sans-serif'
+>>>>>>> e45fbb1ede6c296e307ce43d17f4a203fc6badfc
     });
+>>>>>>> b047dd5697b42e78bf6854f868207aa2ef2aa200
 
     metalTextbox = this.add.text(170, 122, ' ', {
         font: WINDOW_HEIGHT * 0.045 + 'px sans-serif',
     });
 
+
     foodTextbox = this.add.text(170, 91, ' ', {
         font: WINDOW_HEIGHT * 0.045 + 'px sans-serif',
     });
+
+    foodWarningbox = this.add.text(165, 91, ' ', {
+        font: WINDOW_HEIGHT * 0.045 + 'px sans-serif',
+        fill: "red"
+    }); 
 
     timerTextbox = this.add.text(WINDOW_WIDTH * 0.85, WINDOW_HEIGHT * 0.05, '', {
         font: WINDOW_HEIGHT * 0.045 + 'px sans-serif',
@@ -75,11 +96,22 @@ function updateEveryFrame() {
         'Happiness: ' + happinessLevel + '\n' +
         'Energy: ' + currentEnergyLevel + ' (Need ' + requiredEnergyLevel + ')'
     );
+    if(waterLevel <= 5){
+        waterWarningbox.setText('!');
+    }else{
+        waterWarningbox.setText(' ');
+    }
+    if(foodLevel <= 5){
+        foodWarningbox.setText('!');
+    }else{
+        foodWarningbox.setText(' ');
+    }
 
     timerTextbox.setText('Time Left: ' + Math.floor(timeLeft / 60) + 'm ' + timeLeft % 60 + 's');
 }
 
-function displayAddedWater() {
+
+function displayAddedWater(){
     waterTextbox.setText('+' + waterHarvestingRate);
     waterTextbox.setStyle({
         fill: 'green'
