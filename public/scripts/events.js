@@ -14,7 +14,7 @@ function initializeRandomEventGenerator() {
 }
 
 function foodSpoilage() {
-    if (Math.random() < 0.01 && !isFoodSpoiling) {
+    if (Math.random() < 0.03 && !isFoodSpoiling) {
         foodRateModifier += 1;
         displayAnnouncement('Event: Your food is spoiling!');
         isFoodSpoiling = true;
@@ -25,7 +25,7 @@ function foodSpoilage() {
 }
 
 function waterLeakage() {
-    if (Math.random() < 0.01 && !isWaterLeaking) {
+    if (Math.random() < 0.03 && !isWaterLeaking) {
         waterRateModifier += 1;
         displayAnnouncement('Event: Your water storage has suffered a leakage!');
         isWaterLeaking = true;
@@ -36,7 +36,7 @@ function waterLeakage() {
 }
 
 function asteroidHitWaterSupply() {
-    if (Math.random() < 0.03) {
+    if (Math.random() < 0.01) {
         waterLevel -= 100;
         displayAnnouncement('Event: An asteroid has hit your water supply!');
         displayLostWater(100);
@@ -44,7 +44,7 @@ function asteroidHitWaterSupply() {
 }
 
 function ratsAteFoodSupply() {
-    if (Math.random() < 0.03) {
+    if (Math.random() < 0.01) {
         foodLevel -= 100;
         displayAnnouncement('Event: Rats ate some of the food supply!');
         displayLostFood(100);
