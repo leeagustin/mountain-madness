@@ -17,29 +17,33 @@ div{
 
 
 img#farm{
-    display: block;
-    width: 30%;
-    height: 40vh;
-    margin-top: 2%;
-    margin-left: auto;
-    margin-right: 2%;
+    display: inline-block;
+    width: 45%;
+    height: 35%;
+    /* margin-bottom: auto; */
+    position: absolute;
+	top: 10%;
+	right: 3%;
+    /* margin-right: 2%; */
   }
 
 img#water{
-    display: block;
-    width: 40vh;
-    height: 40vh;
-    margin-bottom: 2%;
-    margin-left: auto;
-    margin-right: 2%;
+    display:inline-block;
+    width: 30%;
+    height: 30%;
+    position: absolute;
+	bottom: 10%;
+	right: 10%;
+    /* margin-right: 2%; */
   }
 
 img#energy{
-    display: block;
-    width: 50vh;
-    height: 40vh;
-    margin-left: 2%;
-    margin-right: auto;
+    display: inline-block;
+    width: 40%;
+    height: 30%;
+    position: absolute;
+	bottom: 10%;
+	left: 10%;
   }
 head {
     color: blue;
