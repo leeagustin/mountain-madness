@@ -34,5 +34,5 @@ function harvestMetal() {
     setTimeout(() => {
         metalLevel += 50;
         harvestingMetal = false;
-    }, 15s);
+    }, 15);
 }
