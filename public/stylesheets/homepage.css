@@ -73,9 +73,24 @@ div#lab {
 }
 
 p#label {
-    font-size: 14pt;
+    font-size: 18pt;
     font-family: 'Times New Roman', Times, serif;
     color: grey;
+}
+
+img#upgradeWater {
+    width: 5vh;
+    height: 5vh;
+}
+
+img#upgradeFood {
+    width: 5vh;
+    height: 5vh;
+}
+
+img#upgradeMetal {
+    width: 5vh;
+    height: 5vh;
 }
 /*
 span#myPopup{
