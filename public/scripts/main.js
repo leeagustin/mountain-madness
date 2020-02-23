@@ -60,9 +60,6 @@ function create() {
     }).setOrigin(0.5);
 
     initializeStats();
-
-    displayRules();
-
     initializeRandomEventGenerator();
     createEngineer();
 }
@@ -74,30 +71,6 @@ function displayAnnouncement(msg) {
     setTimeout(() => {
         eventsTextbox.setText('');
     }, 3000);
-}
-
-function displayRules() {
-    var rules = document.getElementById("rulesInfo");
-    var closeBtn = document.getElementsByClassName("close");
-    var stop = true;
-
-    rules.style.display = "block";
-
-    closeBtn.onclick = function() {
-        rules.style.display = "none";
-        stop = false;
-    }
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-            stop = false;
-        }
-    }
-
-    // while (stop) {
-
-    // }
 }
 
 function updateEveryFrame() {
