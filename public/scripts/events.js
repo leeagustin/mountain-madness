@@ -1,6 +1,7 @@
 let oneUpSound = new Audio('sounds/1up.wav');
 
 let isWaterLeaking = false;
+let isFoodSpoiling = false;
 
 function initializeRandomEventGenerator() {
     setTimeout(() => {
@@ -10,6 +11,15 @@ function initializeRandomEventGenerator() {
         waterLeakage();
     }, 6000);
 }
+
+function foodSpoilage() {
+    if (Math.random() < 0.03 && !isFoodSpoiling) {
+        foodRateModifier += 1;
+        showEventText('Your food is spoiling!');
+        isFoodSpoiling = true;
+    }
+}
+
 function waterLeakage() {
     if (Math.random() < 0.03 && !isWaterLeaking) {
         waterRateModifier += 1;
