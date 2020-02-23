@@ -1,5 +1,6 @@
 function createRandomEvent() {
     asteroidHitWaterSupply();
+    ratsAteFoodSupply();
 }
 
 function asteroidHitWaterSupply() {
