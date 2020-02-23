@@ -37,14 +37,14 @@ function waterLeakage() {
 
 function asteroidHitWaterSupply() {
     if (Math.random() < 0.03) {
-        waterLevel -= 1000;
+        waterLevel -= 100;
         displayAnnouncement('Event: An asteroid has hit your water supply!');
     }
 }
 
 function ratsAteFoodSupply() {
     if (Math.random() < 0.03) {
-        foodLevel -= 1000;
+        foodLevel -= 100;
         displayAnnouncement('Event: Rats ate some of the food supply!');
     }
 }
