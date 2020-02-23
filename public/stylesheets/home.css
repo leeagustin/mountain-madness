@@ -4,6 +4,10 @@ body {
     background-position: 50% 10%;
     height: 100%;
     text-align: center;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
 }
 
 canvas {
@@ -88,7 +92,6 @@ img {
 #farmProgress {
     width: 0%;
     height: 3vh;
-
     border-radius: 1vh;
     background-color: green;
 }
@@ -151,10 +154,6 @@ p#label {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     text-align: center;
-    -webkit-user-select: none; /* Safari */        
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* IE10+/Edge */
-    user-select: none; /* Standard */
 }
 
 .container_up {
@@ -182,8 +181,4 @@ p#label {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     text-align: center;
-    -webkit-user-select: none; /* Safari */        
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* IE10+/Edge */
-    user-select: none; /* Standard */
 }
