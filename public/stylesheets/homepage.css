@@ -5,40 +5,26 @@ body {
     height: 100%;
 }
 
-div {
-    margin-left: 5vh;
-    margin-right: 5vh;
+img {
+    position: relative;
 }
 
-div#farm {
+.actions-container {
+    text-align: center;
+    position: absolute;
+    bottom: 12vh;
+    width: 90%;
+}
+
+.action {
     display: inline-block;
     position: relative;
+    width: 20%;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
-div#metal {
-    display: inline-block;
-    position: relative;
-}
-
-div#water {
-    display: inline-block;
-    position: relative;
-    /* margin-right: 2%; */
-}
-
-img#farm {
-    position: relative;
-    width: 40vh;
-    height: 20vh;
-}
-
-img#water {
-    position: relative;
-    width: 30vh;
-    height: 30vh;
-}
-
-#myProgress {
+.progressBar {
     display: inline-block;
     position: relative;
     width: 40vh;
@@ -46,22 +32,21 @@ img#water {
     background-color: grey;
 }
 
-#farmBar {
+#farmProgress {
     width: 1%;
     height: 2vh;
     background-color: green;
     margin: 0vh;
 }
 
-#metalBar {
+#metalProgress {
     width: 1%;
     height: 2vh;
     background-color: green;
     margin: 0vh;
 }
 
-
-#waterBar {
+#waterProgress {
     width: 1%;
     height: 2vh;
     background-color: green;
@@ -73,13 +58,6 @@ div#lab {
     width: 10vh;
     height: 40vh;
     position: relative;
-}
-
-#actions {
-    text-align: center;
-    position: absolute;
-    bottom: 12vh;
-    width: 90%;
 }
 
 /*

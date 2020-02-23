@@ -5,8 +5,6 @@ let harvestingFood = false;
 let harvestingWater = false;
 let harvestingMetal = false;
 
-
-
 function harvestFood() {
   if (harvestingFood)
     return;
@@ -43,7 +41,7 @@ function harvestMetal() {
 
 
 function moveFarmProgressBar() {
-  var elem = document.getElementById("farmBar");
+  var elem = document.getElementById("farmProgress");
   var width = 1;
   var id = setInterval(frame, 100);
 
@@ -59,7 +57,7 @@ function moveFarmProgressBar() {
 }
 
 function moveMetalProgressBar() {
-  var elem = document.getElementById("metalBar");
+  var elem = document.getElementById("metalProgress");
   var width = 1;
   var id = setInterval(frame, 150);
 
@@ -76,7 +74,7 @@ function moveMetalProgressBar() {
 
 function moveWaterProgressBar() {
 
-  var elem = document.getElementById("waterBar");
+  var elem = document.getElementById("waterProgress");
   var width = 1;
   var id = setInterval(frame, 240);
 
