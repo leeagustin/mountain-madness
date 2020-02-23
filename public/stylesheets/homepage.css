@@ -90,5 +90,14 @@ span#myPopup{
     position: absolute;
 	bottom: 10%;
 	left: 10%;
+  }
+
+div#lab{
+    display: inline-block;
+    width: 10vh;
+    height: 40vh;
+    position: absolute;
+	bottom: 10%;
+	left: 10%;
 }
 */
