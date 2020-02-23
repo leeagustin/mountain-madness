@@ -32,7 +32,6 @@ function create() {
     const waterButton = this.add.text(WINDOW_WIDTH - 300, 31, 'Water', {
         font: '20px Arial',
         fill: '#0033cc'
-        document.body.style.background = color;
     });
     waterButton.setInteractive();
     waterButton.on('pointerdown', () => {
