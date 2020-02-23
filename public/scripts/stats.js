@@ -64,7 +64,7 @@ function updateWater() {
 
 function updateHappiness() {
     if (requiredEnergyLevel > currentEnergyLevel)
-        happinessLevel -= (requiredEnergyLevel - currentEnergyLevel) / 25;
+        happinessLevel -= Math.ceil((requiredEnergyLevel - currentEnergyLevel) / 25);
 
     if (happinessLevel <= 0)
         window.location.href = '/gameover';
