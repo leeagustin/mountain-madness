@@ -21,15 +21,15 @@ function preload() {}
 function create() {
     initializeStats();
     // buttons
-    const foodButton = this.add.text(150, 20, 'Food', { fill: '#0f0' });
+    const foodButton = this.add.text(170, 52, 'Food', { font: '20px Arial', fill: '#0f0' });
     foodButton.setInteractive();
     foodButton.on('pointerdown', () => { setTimeout(harvestFood, 3000); });
     
-    const waterButton = this.add.text(150, 30, 'Water', { fill: '#0f0' });
+    const waterButton = this.add.text(170, 31, 'Water', { font: '20px Arial', fill: '#0f0' });
     waterButton.setInteractive();
     waterButton.on('pointerdown', () => { setTimeout(harvestWater, 3000); });
     
-    const metalButton = this.add.text(150, 40, 'Metal', { fill: '#0f0' });
+    const metalButton = this.add.text(170, 73, 'Metal', { font: '20px Arial', fill: '#0f0' });
     metalButton.setInteractive();
     metalButton.on('pointerdown', () => { setTimeout(harvestMetal, 3000); });
     
