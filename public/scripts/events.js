@@ -1,4 +1,4 @@
-function intializeRandomEventGenerator() {
+function initializeRandomEventGenerator() {
     setTimeout(() => {
         asteroidHitWaterSupply();
         ratsAteFoodSupply();
@@ -21,11 +21,10 @@ function ratsAteFoodSupply() {
 
 function createEngineer() {
     setTimeout(() => {
+        engineers += 1;
+        showEventText('An engineer has been created!');
         createEngineer();
     }, 30000);
-    engineers += 1;
-
-    showEventText('An engineer has been created!');
 }
 
 function showEventText(msg) {

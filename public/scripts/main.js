@@ -19,10 +19,6 @@ let eventsTextbox;
 function preload() {}
 
 function create() {
-    initializeStats();
-    initializeRandomEventGenerator();
-    createEngineer();
-
     // buttons
     const foodButton = this.add.text(170, 52, 'Food', {
         font: '20px Arial',
@@ -61,9 +57,12 @@ function create() {
         font: '30px Arial',
         fill: '#FFFFFF'
     }).setOrigin(0.5);
+    
+    initializeStats();
+    initializeRandomEventGenerator();
+    createEngineer();
 }
 
 function update() {
-    createRandomEvent();
     statsTextbox.setText(`Population: ${populationLevel} (Engineers: ${engineers})\nWater: ${waterLevel}\nFood: ${foodLevel}\nMetal: ${metalLevel}\nHappiness: ${happinessLevel}\nCurrent Energy: ${currentEnergyLevel}\nRequired Energy: ${requiredEnergyLevel}`);
 }
