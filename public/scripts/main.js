@@ -35,26 +35,23 @@ function create() {
     });
 
     waterTextbox = this.add.text(170, 60, ' ', {
-        font: WINDOW_HEIGHT * 0.045 + 'px sans-serif',
-        fill: "green"
-    }); 
+        font: WINDOW_HEIGHT * 0.045 + 'px sans-serif'
+    });
 
     metalTextbox = this.add.text(170, 122, ' ', {
-        font: WINDOW_HEIGHT * 0.045 + 'px sans-serif',
-        fill: "green"
-    }); 
+        font: WINDOW_HEIGHT * 0.045 + 'px sans-serif'
+    });
 
     foodTextbox = this.add.text(170, 91, ' ', {
-        font: WINDOW_HEIGHT * 0.045 + 'px sans-serif',
-        fill: "green"
-    }); 
+        font: WINDOW_HEIGHT * 0.045 + 'px sans-serif'
+    });
 
     timerTextbox = this.add.text(WINDOW_WIDTH * 0.85, WINDOW_HEIGHT * 0.05, '', {
         font: WINDOW_HEIGHT * 0.045 + 'px sans-serif',
         fill: "#FFFFFF"
     });
 
-    eventsTextBox = this.add.text(WINDOW_WIDTH * 0.6, WINDOW_HEIGHT / 2, '', {
+    eventsTextbox = this.add.text(WINDOW_WIDTH * 0.6, WINDOW_HEIGHT / 2, '', {
         font: WINDOW_HEIGHT * 0.07 + 'px sans-serif',
         fill: '#FFFFFF'
     }).setOrigin(0.5);
@@ -86,23 +83,52 @@ function updateEveryFrame() {
     timerTextbox.setText('Time Left: ' + Math.floor(timeLeft / 60) + 'm ' + timeLeft % 60 + 's');
 }
 
-function displayAddedWater(){
+function displayAddedWater() {
     waterTextbox.setText('+' + waterHarvestingRate);
+    waterTextbox.setStyle({
+        fill: 'green'
+    });
     setTimeout(() => {
-        waterTextbox.setText( " ");
+        waterTextbox.setText(" ");
     }, 1000);
 }
 
-function displayAddedMetal(){
+function displayAddedMetal() {
     metalTextbox.setText('+' + metalHarvestingRate);
+    metalTextbox.setStyle({
+        fill: 'green'
+    });
     setTimeout(() => {
-        metalTextbox.setText( " ");
+        metalTextbox.setText(" ");
     }, 1000);
 }
 
-function displayAddedFood(){
+function displayAddedFood() {
     foodTextbox.setText('+' + foodHarvestingRate);
+    foodTextbox.setStyle({
+        fill: 'green'
+    });
     setTimeout(() => {
-        foodTextbox.setText( " ");
+        foodTextbox.setText(" ");
+    }, 1000);
+}
+
+function displayLostWater(value) {
+    waterTextbox.setText('-' + value);
+    waterTextbox.setStyle({
+        fill: 'red'
+    });
+    setTimeout(() => {
+        waterTextbox.setText(" ");
+    }, 1000);
+}
+
+function displayLostFood(value) {
+    foodTextbox.setText('-' + value);
+    foodTextbox.setStyle({
+        fill: 'red'
+    });
+    setTimeout(() => {
+        foodTextbox.setText(" ");
     }, 1000);
 }
