@@ -10,7 +10,7 @@ function harvestFood() {
 
     harvestingFood = true;
     setTimeout(() => {
-        foodLevel += harvestingRate;
+        foodLevel += foodHarvestingRate;
         harvestingFood = false;
     }, 10000);
 }
@@ -32,7 +32,7 @@ function harvestMetal() {
     
     harvestingMetal = true;
     setTimeout(() => {
-        metalLevel += 100;
+        metalLevel += 50;
         harvestingMetal = false;
-    });
+    }, 15s);
 }
