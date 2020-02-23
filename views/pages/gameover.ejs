@@ -2,7 +2,13 @@
 <html>
 
 <audio preload="auto" src="sounds/miisong.mp3" loop="true" autobuffer></audio>
-<script src = "/scripts/music.js" defer></script>
+<script>
+    function startMusic() {
+        let scriptTag = document.createElement('script');
+        scriptTag.setAttribute('src', 'scripts/music.js');
+        document.head.appendChild(scriptTag);
+    }
+</script>
 
 <style>
     html {
@@ -33,7 +39,7 @@
     }
 </style>
 
-<body>
+<body onclick = "startMusic()">
     <h1>GAME OVER</h1>
     <button onclick = "window.location.href = '/home'">TRY AGAIN?</button>
 </body>

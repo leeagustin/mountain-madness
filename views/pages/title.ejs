@@ -2,13 +2,19 @@
 <html>
 
 <audio preload="auto" src="sounds/miisong.mp3" loop="true" autobuffer></audio>
-<script src="/scripts/music.js" defer></script>
+<script>
+    function startMusic() {
+        let scriptTag = document.createElement('script');
+        scriptTag.setAttribute('src', 'scripts/music.js');
+        document.head.appendChild(scriptTag);
+    }
+</script>
 
 <head>
     <link rel="stylesheet" type="text/css" href="stylesheets/homepage.css" />
 </head>
 
-<body>
+<body onclick = "startMusic()">
 <h1 align = "center">Game title page :)</h1>
  
 <div>

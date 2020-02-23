@@ -2,12 +2,17 @@
 <html>
 
 <audio preload="auto" src="sounds/miisong.mp3" loop="true" autobuffer></audio>
-<script src="/scripts/music.js" defer></script>
+<script>
+    function startMusic() {
+        let scriptTag = document.createElement('script');
+        scriptTag.setAttribute('src', 'scripts/music.js');
+        document.head.appendChild(scriptTag);
+    }
+</script>
 
 <head>
     <link rel="stylesheet" href="/stylesheets/homepage.css">
     <audio preload="auto" src="sounds/miisong.mp3" loop="true" autobuffer></audio>
-    <script src="/scripts/music.js" defer></script>
     <script src="//cdn.jsdelivr.net/npm/phaser@3.22.0/dist/phaser.js"></script>
     <script src="/scripts/main.js" defer></script>
     <script src="/scripts/stats.js" defer></script>
@@ -15,7 +20,7 @@
     <script src="/scripts/events.js" defer></script>
 </head>
 
-<body>
+<body onclick = "startMusic()">
     <div>Plant</div>
 
 </body>

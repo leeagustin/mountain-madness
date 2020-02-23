@@ -23,8 +23,7 @@ function create() {
     const foodButton = this.add.text(WINDOW_WIDTH - 300, 52, 'Food', {
         font: '20px Arial',
         fill: '#009900',
-        backgroundColor: 'green',
-        bo
+        backgroundColor: 'green'
     });
     foodButton.setInteractive();
     foodButton.on('pointerdown', () => {
@@ -69,7 +68,7 @@ function create() {
 
 function updateEveryFrame() {
     statsTextbox.setText(
-        'Population: ' + populationLevel + ' (Engineers:' + engineers + ')\n' +
+        'Population: ' + populationLevel + ' (Engineers: ' + engineers + ')\n' +
         'Water: ' + waterLevel + '\n' +
         'Food: ' + foodLevel + '\n' +
         'Metal: ' + metalLevel + '\n' +
