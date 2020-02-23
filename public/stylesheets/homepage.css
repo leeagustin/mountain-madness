@@ -1,4 +1,11 @@
 body {
-    background-image: url("../images/wall-e.jpg");
+    background-repeat: no-repeat;
+    background-color: #c2cfc5;
     height: 100%;
+}
+
+div {
+    background: color url("../images/farm.png") others;
+    background-repeat: no-repeat;
+    height: 50%;
 }

@@ -20,7 +20,7 @@ function preload() {}
 
 function create() {
     // buttons
-    const foodButton = this.add.text(170, 52, 'Food', {
+    const foodButton = this.add.text(WINDOW_WIDTH - 300, 52, 'Food', {
         font: '20px Arial',
         fill: '#0f0'
     });
@@ -29,7 +29,7 @@ function create() {
         harvestFood();
     });
 
-    const waterButton = this.add.text(170, 31, 'Water', {
+    const waterButton = this.add.text(WINDOW_WIDTH - 300, 31, 'Water', {
         font: '20px Arial',
         fill: '#0f0'
     });
@@ -38,7 +38,7 @@ function create() {
         harvestWater();
     });
 
-    const metalButton = this.add.text(170, 73, 'Metal', {
+    const metalButton = this.add.text(WINDOW_WIDTH - 300, 73, 'Metal', {
         font: '20px Arial',
         fill: '#0f0'
     });
