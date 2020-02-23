@@ -22,12 +22,12 @@ function preload() {}
 function create() {
     // buttons
     statsTextbox = this.add.text(10, 10, '', {
-        font: '30px Arial',
+        font: '30px Times',
         fill: '#FFFFFF'
     });
 
     eventsTextBox = this.add.text(WINDOW_WIDTH / 2, WINDOW_HEIGHT / 6, '', {
-        font: '50px Arial',
+        font: '40px Arial',
         fill: '#FFFFFF'
     }).setOrigin(0.5);
 
@@ -45,7 +45,4 @@ function updateEveryFrame() {
         'Happiness: ' + happinessLevel + '\n' +
         'Energy: ' + currentEnergyLevel + ' (Need ' + requiredEnergyLevel + ')'
     );
-
-    WINDOW_WIDTH = window.innerWidth * 0.985;
-    WINDOW_HEIGHT = window.innerHeight * 0.97;
 }
