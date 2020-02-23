@@ -21,32 +21,35 @@ let testingTextbox;
 let img1 = new Image();
 let timeLeft = 600;
 
-function preload() {
-    this.load.image("panel", "../images/monitor.jpg");
-}
+function preload() {}
 
 function create() {
     // buttons
-    this.add.image(WINDOW_WIDTH * 0.1, WINDOW_HEIGHT * 0.4, "panel").setOrigin(0.9, 1)
-
     statsTextbox = this.add.text(30, 30, ' ', {
         font: WINDOW_HEIGHT * 0.045 + 'px sans-serif',
         fill: "#FFFFFF"
     });
 
     waterTextbox = this.add.text(170, 60, ' ', {
-        font: WINDOW_HEIGHT * 0.045 + 'px sans-serif',
-        fill: "green"
+        font: WINDOW_HEIGHT * 0.045 + 'px sans-serif'
     }); 
 
     metalTextbox = this.add.text(170, 122, ' ', {
         font: WINDOW_HEIGHT * 0.045 + 'px sans-serif',
-        fill: "green"
-    }); 
+    });
 
     foodTextbox = this.add.text(170, 91, ' ', {
         font: WINDOW_HEIGHT * 0.045 + 'px sans-serif',
-        fill: "green"
+    });
+
+    waterWarningbox = this.add.text(165, 60, ' ', {
+        font: WINDOW_HEIGHT * 0.045 + 'px sans-serif',
+        fill: "red"
+    });
+
+    foodWarningbox = this.add.text(165, 91, ' ', {
+        font: WINDOW_HEIGHT * 0.045 + 'px sans-serif',
+        fill: "red"
     }); 
 
     timerTextbox = this.add.text(WINDOW_WIDTH * 0.85, WINDOW_HEIGHT * 0.05, '', {
@@ -54,8 +57,8 @@ function create() {
         fill: "#FFFFFF"
     });
 
-    eventsTextBox = this.add.text(WINDOW_WIDTH * 0.6, WINDOW_HEIGHT / 2, '', {
-        font: WINDOW_HEIGHT * 0.07 + 'px sans-serif',
+    eventsTextbox = this.add.text(WINDOW_WIDTH * 0.6, WINDOW_HEIGHT / 4, '', {
+        font: WINDOW_HEIGHT * 0.08 + 'px sans-serif',
         fill: '#FFFFFF'
     }).setOrigin(0.5);
 
@@ -82,27 +85,67 @@ function updateEveryFrame() {
         'Happiness: ' + happinessLevel + '\n' +
         'Energy: ' + currentEnergyLevel + ' (Need ' + requiredEnergyLevel + ')'
     );
+    if(waterLevel <= 5){
+        waterWarningbox.setText('!');
+    }else{
+        waterWarningbox.setText(' ');
+    }
+    if(foodLevel <= 5){
+        foodWarningbox.setText('!');
+    }else{
+        foodWarningbox.setText(' ');
+    }
 
     timerTextbox.setText('Time Left: ' + Math.floor(timeLeft / 60) + 'm ' + timeLeft % 60 + 's');
 }
 
+
 function displayAddedWater(){
     waterTextbox.setText('+' + waterHarvestingRate);
+    waterTextbox.setStyle({
+        fill: 'green'
+    });
     setTimeout(() => {
-        waterTextbox.setText( " ");
+        waterTextbox.setText(" ");
     }, 1000);
 }
 
-function displayAddedMetal(){
+function displayAddedMetal() {
     metalTextbox.setText('+' + metalHarvestingRate);
+    metalTextbox.setStyle({
+        fill: 'green'
+    });
     setTimeout(() => {
-        metalTextbox.setText( " ");
+        metalTextbox.setText(" ");
     }, 1000);
 }
 
-function displayAddedFood(){
+function displayAddedFood() {
     foodTextbox.setText('+' + foodHarvestingRate);
+    foodTextbox.setStyle({
+        fill: 'green'
+    });
     setTimeout(() => {
-        foodTextbox.setText( " ");
+        foodTextbox.setText(" ");
+    }, 1000);
+}
+
+function displayLostWater(value) {
+    waterTextbox.setText('-' + value);
+    waterTextbox.setStyle({
+        fill: 'red'
+    });
+    setTimeout(() => {
+        waterTextbox.setText(" ");
+    }, 1000);
+}
+
+function displayLostFood(value) {
+    foodTextbox.setText('-' + value);
+    foodTextbox.setStyle({
+        fill: 'red'
+    });
+    setTimeout(() => {
+        foodTextbox.setText(" ");
     }, 1000);
 }
