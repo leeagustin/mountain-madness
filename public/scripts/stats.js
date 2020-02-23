@@ -14,7 +14,7 @@ let waterRateModifier = 1;
 let engineers = 20;
 
 function initializeStats() {
-    populationLevel = 1000;
+    populationLevel = 1500;
     foodLevel = 50;
     waterLevel = 50;
     metalLevel = 0;
