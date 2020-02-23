@@ -108,13 +108,13 @@ function upgradeEnergy () {
 
 function noMetal (cost) {
     var dif =  cost-metalLevel;
-    var msg = 'Insufficient Metal: ' + dif + ' needed!';
+    var msg = 'Insufficient Metal: ' + dif + ' more needed!';
     displayAnnouncement(msg);
 }
 
 function noEngi (cost) {
     var dif =  cost-engineers;
-    var msg = 'Insufficient Engineers: ' + dif + ' needed!';
+    var msg = 'Insufficient Engineers: ' + dif + ' more needed!';
     displayAnnouncement(msg);
 }
 

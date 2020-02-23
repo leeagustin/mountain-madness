@@ -22,7 +22,6 @@ var img1 = new Image();
 
 function preload() {
     this.load.image("panel", "../images/monitor.jpg");
-
 }
 
 function create() {
@@ -30,14 +29,14 @@ function create() {
     this.add.image(WINDOW_WIDTH * 0.1, WINDOW_HEIGHT * 0.4, "panel").setOrigin(0.9,1)
 
     statsTextbox = this.add.text(30, 30, ' ', {
-        font: '30px Times',
+        font: WINDOW_HEIGHT * 0.045 + 'px sans-serif',
         fill: "#FFFFFF"
     });
 
 
-
-    eventsTextBox = this.add.text(WINDOW_WIDTH * 0.6, WINDOW_HEIGHT / 4, '', {
-        font: '45px Times',
+    eventsTextBox = this.add.text(WINDOW_WIDTH * 0.6, WINDOW_HEIGHT / 2, '', {
+        background: "#FFFFFF",
+        font: WINDOW_HEIGHT * 0.07 + 'px sans-serif',
         fill: '#FFFFFF'
     }).setOrigin(0.5);
 
@@ -64,6 +63,4 @@ function updateEveryFrame() {
         'Happiness: ' + happinessLevel + '\n' +
         'Energy: ' + currentEnergyLevel + ' (Need ' + requiredEnergyLevel + ')'
     );
-
-    
 }
