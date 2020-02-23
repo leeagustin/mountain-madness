@@ -9,9 +9,16 @@ function asteroidHitWaterSupply() {
     }
 }
 
+function ratsAteFoodSupply() {
+    if (Math.random() < 0.0001) {
+        foodLevel -= 100;
+        showEventText('Rats ate some of the food supply!');
+    }
+}
+
 function showEventText(msg) {
     eventsTextBox.setText(`Event: ${msg}`);
     setTimeout(() => {
         eventsTextBox.setText('');
-    }, 1000);
+    }, 2000);
 }

@@ -26,10 +26,10 @@ function create() {
         fill: '#FFFFFF'
     });
 
-    eventsTextBox = this.add.text(WINDOW_WIDTH / 2, WINDOW_HEIGHT * 0.25, '', {
+    eventsTextBox = this.add.text(WINDOW_WIDTH / 2, WINDOW_HEIGHT / 6, '', {
         font: '30px Arial',
         fill: '#FFFFFF'
-    });
+    }).setOrigin(0.5);
 }
 
 function update() {
