@@ -1,7 +1,7 @@
 let clickSounds = [];
-clickSounds[0] = document.getElementsByTagName('audio')[1];
-clickSounds[1] = document.getElementsByTagName('audio')[2];
-clickSounds[2] = document.getElementsByTagName('audio')[3];
+clickSounds[0] = new Audio('sounds/click1.mp3');
+clickSounds[1] = new Audio('sounds/click2.mp3');
+clickSounds[2] = new Audio('sounds/click3.mp3');
 
 function playButtonClick() {
     let buttonNumber = Math.floor(Math.random() * 3);
