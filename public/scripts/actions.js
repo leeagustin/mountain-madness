@@ -5,21 +5,22 @@ let harvestingFood = false;
 let harvestingWater = false;
 let harvestingMetal = false;
 
+
+
 function harvestFood() {
     if (harvestingFood)
         return;
-
     harvestingFood = true;
     setTimeout(() => {
         foodLevel += foodHarvestingRate;
         harvestingFood = false;
     }, 10000);
+    clearFarmBar();
 }
 
 function harvestWater() {
     if (harvestingWater)
         return;
-
     harvestingWater = true;
     setTimeout(() => {
         waterLevel += waterHarvestingRate;
@@ -30,10 +31,71 @@ function harvestWater() {
 function harvestMetal() {
     if (harvestingMetal)
         return;
-    
     harvestingMetal = true;
     setTimeout(() => {
         metalLevel += metalHarvestingRate;
         harvestingMetal = false;
     }, 15000);
+ 
 }
+
+
+function moveFarmProgressBar(){
+  var i = 0;
+  if (i == 0) {
+    i = 1;
+    var elem = document.getElementById("farmBar");
+    var width = 1;
+    var id = setInterval(frame, 10);
+    function frame() {
+      if (width >= 100) {
+        clearInterval(id);
+        i = 0;
+        elem.style.width = 0;
+      } else {
+        width++;
+        elem.style.width = width + "%";
+      }
+    }
+  }
+}
+
+function moveMetalProgressBar(){
+    var i = 0;
+    if (i == 0) {
+      i = 1;
+      var elem = document.getElementById("metalBar");
+      var width = 1;
+      var id = setInterval(frame, 150);
+      function frame() {
+        if (width >= 150) {
+          clearInterval(id);
+          i = 0;
+          elem.style.width = 0;
+        } else {
+          width++;
+          elem.style.width = width + "%";
+        }
+      }
+    }
+  }
+
+  function moveWaterProgressBar(){
+    var i = 0;
+    if (i == 0) {
+      i = 1;
+      var elem = document.getElementById("waterBar");
+      var width = 1;
+      var id = setInterval(frame, 240);
+      function frame() {
+        if (width >= 100) {
+          clearInterval(id);
+          i = 0;
+          elem.style.width = 0;
+        } else {
+          width++;
+          elem.style.width = width + "%";
+        }
+      }
+    }
+  }
