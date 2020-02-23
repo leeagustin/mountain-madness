@@ -24,26 +24,26 @@
 <script src="/scripts/buttonclick.js" defer></script>
 
 <body onclick="startMusic()">
-    <div id="actions">
+    <div class="actions-container">
         <!-- <div class="popup" id="lab" onclick="lab(); playButtonClick();">Laboratory</div> -->
-        <div id="farm">
-            <img id="farm" src="images/farm.png" onclick="harvestFood(); playButtonClick();"><br>
-            <div id="myProgress">
-                <div id="farmBar"></div>
+        <div class="action">
+            <img src="images/farm.png" onclick="harvestFood(); playButtonClick();"><br>
+            <div class="progressBar">
+                <div id="farmProgress"></div>
             </div>
         </div>
 
-        <div id="metal">
-            <img id="metal" src="images/metal.png" onclick="harvestMetal(); playButtonClick();"><br>
-            <div id="myProgress">
-                <div id="metalBar"></div>
+        <div class="action">
+            <img src="images/metal.png" onclick="harvestMetal(); playButtonClick();"><br>
+            <div class="progressBar">
+                <div id="metalProgress"></div>
             </div>
         </div>
 
-        <div id="water">
-            <img id="water" src="images/water.png" onclick="harvestWater(); playButtonClick();"><br>
-            <div id="myProgress">
-                <div id="waterBar"></div>
+        <div class="action">
+            <img src="images/water.png" onclick="harvestWater(); playButtonClick();"><br>
+            <div class="progressBar">
+                <div id="waterProgress"></div>
             </div>
         </div>
     </div>
