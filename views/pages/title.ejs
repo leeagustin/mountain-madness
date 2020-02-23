@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html>
 
+
+<link rel="stylesheet" href="/stylesheets/homepage.css">
+
+
 <script src="/scripts/buttonclick.js" defer></script>
+<script src="/scripts/rules.js" defer></script>
 
 <style>
     html {
@@ -26,7 +31,23 @@
     }
 </style>
 
-<body>
+<body><!-- Trigger/Open The Modal -->
+    <button id="myBtn" onclick="displayRules();">Rules</button>
+    
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+    
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close" onclick="closeRules();">&times;</span>
+        <h1>Rules</h1>
+        <p>Win by surviving 10 minutes</p>
+        <p>Don't let happiness fall to zero</p>
+        <p>Good luck</p>
+      </div>
+    
+    </div>
+
     <form action="/home" method="get">
         <input onclick="playButtonClick()" type="submit" value="BEGIN">
     </form>

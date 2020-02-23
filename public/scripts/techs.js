@@ -19,12 +19,13 @@ function upgradeFood() {
         // You do not have enough engineers
         noEngi(engineerUpgradeCost);
         return;
-    } else if (metalLevel < metalCostPerLevel * (timesFoodUpgraded + 1)) {
+    } else if (metalLevel < metalCostPerLevel * timesFoodUpgraded) {
         // You do not have enough metal
-        noMetal(metalCostPerLevel * (timesFoodUpgraded + 1));
+        noMetal(metalCostPerLevel * timesFoodUpgraded);
         return;
     } else {
         engineers -= engineerUpgradeCost;
+        metalLevel -= metalCostPerLevel * timesFoodUpgraded;
         foodHarvestingRate *= 2;
         timesFoodUpgraded += 1;
         harvestFoodText.innerHTML = 'Harvest ' + foodHarvestingRate + ' Food';
@@ -43,12 +44,13 @@ function upgradeWater() {
         // You do not have enough engineers
         noEngi(engineerUpgradeCost);
         return;
-    } else if (metalLevel < metalCostPerLevel * (timesWaterUpgraded + 1)) {
+    } else if (metalLevel < metalCostPerLevel * timesWaterUpgraded) {
         // You do not have enough metal
-        noMetal(metalCostPerLevel * (timesWaterUpgraded + 1));
+        noMetal(metalCostPerLevel * timesWaterUpgraded);
         return;
     } else {
         engineers -= engineerUpgradeCost;
+        metalLevel -= metalCostPerLevel * timesWaterUpgraded;
         waterHarvestingRate *= 2;
         timesWaterUpgraded += 1;
         harvestWaterText.innerHTML = 'Harvest ' + waterHarvestingRate + ' Water';
@@ -68,12 +70,13 @@ function upgradeMetal() {
         // You do not have enough engineers
         noEngi(engineerUpgradeCost);
         return;
-    } else if (metalLevel < metalCostPerLevel * (timesMetalUpgraded + 1)) {
+    } else if (metalLevel < metalCostPerLevel * timesMetalUpgraded) {
         // You do not have enough metal
-        noMetal(metalCostPerLevel * (timesMetalUpgraded + 1));
+        noMetal(metalCostPerLevel * timesMetalUpgraded);
         return;
     } else {
         engineers -= engineerUpgradeCost;
+        metalLevel -= metalCostPerLevel * timesMetalUpgraded;
         metalHarvestingRate *= 2;
         timesMetalUpgraded += 1;
         harvestMetalText.innerHTML = 'Harvest ' + metalHarvestingRate + ' Metal';
@@ -91,12 +94,13 @@ function upgradeEnergy () {
         // You do not have enough engineers
         noEngi(engineerUpgradeCost);
         return;
-    } else if (metalLevel < metalCostPerLevel * (timesEnergyUpgraded + 1)) {
+    } else if (metalLevel < metalCostPerLevel * timesEnergyUpgraded) {
         // You do not have enough metal
-        noMetal(metalCostPerLevel * (timesEnergyUpgraded + 1));
+        noMetal(metalCostPerLevel * timesEnergyUpgraded);
         return;
     } else {
         engineers -= engineerUpgradeCost;
+        metalLevel -= metalCostPerLevel * timesEnergyUpgraded;
         currentEnergyLevel *= 1.5;
         timesEnergyUpgraded += 1;
     }    
