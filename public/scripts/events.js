@@ -1,7 +1,7 @@
 let oneUpSound = new Audio('sounds/1up.wav');
 
-let isWaterLeaking = false;
 let isFoodSpoiling = false;
+let isWaterLeaking = false;
 
 function initializeRandomEventGenerator() {
     setTimeout(() => {
