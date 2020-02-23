@@ -27,7 +27,7 @@ function create() {
     });
 
     eventsTextBox = this.add.text(WINDOW_WIDTH / 2, WINDOW_HEIGHT / 6, '', {
-        font: '50px Arial',
+        font: '40px Arial',
         fill: '#FFFFFF'
     }).setOrigin(0.5);
 

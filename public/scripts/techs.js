@@ -10,12 +10,15 @@ let timesEnergyUpgraded = 0;
 function upgradeFoodHarvest () {
     var engineerUpgradeCost = engineerCost[timesFoodUpgraded];
 
-    if (timesFoodUpgraded > maxUpgradeLevel) {
+    if (timesFoodUpgraded >= maxUpgradeLevel) {
         // You have reached the maximum level for this technology
+        return;
     } else if (engineers < engineerUpgradeCost) {
         // You do not have enough engineers
+        return;
     } else if (metalLevel < metalCostPerLevel * (timesFoodUpgraded + 1)) {
         // You do not have enough metal
+        return;
     } else {
         engineers -= engineerUpgradeCost;
         foodHarvestingRate *= 2;
@@ -27,7 +30,7 @@ function upgradeFoodHarvest () {
 function upgradeWaterHarvest () {
     var engineerUpgradeCost = engineerCost[timesWaterUpgraded];
 
-    if (timesWaterUpgraded > maxUpgradeLevel) {
+    if (timesWaterUpgraded >= maxUpgradeLevel) {
         // You have reached the maximum level for this technology
     } else if (engineers < engineerUpgradeCost) {
         // You do not have enough engineers
