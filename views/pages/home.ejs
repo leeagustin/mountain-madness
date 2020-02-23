@@ -25,7 +25,7 @@
 
 <body onclick="startMusic()">
     <div class="actions-container">
-        <!-- <div class="popup" id="lab" onclick="lab(); playButtonClick();">Laboratory</div> -->
+
         <div class="action">
             <p id="label">plant</p>
             <img src="images/farm.png" onclick="harvestFood(); playButtonClick();"><br>
@@ -48,6 +48,16 @@
             <div class="progressBar">
                 <div id="waterProgress"></div>
             </div>
+        </div>
+
+        <div class="action">
+            <img id=upgradeWater src="images/upgrade.png" onclick="upgradeWater(); playButtonClick();"><br>
+        </div>
+        <div class="action">
+            <img id=upgradeFood src="images/upgrade.png" onclick="upgradeFood(); playButtonClick();"><br>
+        </div>
+        <div class="action">
+            <img id=upgradeMetal src="images/upgrade.png" onclick="upgradeMetal(); playButtonClick();"><br>
         </div>
     </div>
 </body>

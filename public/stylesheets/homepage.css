@@ -10,11 +10,13 @@ canvas {
     position: absolute;
     left: 1vh;
     top: 0vh;
+    z-index: 0;
 }
 
 img {
     position: relative;
     width: 100%;
+    padding-bottom: 2vh;
 }
 
 .actions-container {
@@ -22,6 +24,7 @@ img {
     position: absolute;
     bottom: 12vh;
     width: 95%;
+    z-index: 1;
 }
 
 .action {
