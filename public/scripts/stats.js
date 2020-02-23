@@ -33,16 +33,6 @@ function updateStats() {
     updateEnergyRequirement();
 }
 
-function updateFoodAndWater() {
-    waterLevel -= Math.floor(populationLevel / 1000);
-    foodLevel -= Math.floor(populationLevel / 1000);
-
-    if (waterLevel < 0)
-        waterLevel = 0;
-    if (foodLevel < 0)
-        foodLevel = 0;
-}
-
 function updatePopulation() {
     populationLevel += Math.floor(populationLevel / 250);
 
@@ -56,6 +46,18 @@ function updatePopulation() {
         populationLevel -= dead;
         happinessLevel -= Math.floor(dead / 4);
     }
+}
+
+function updateFood() {  
+    foodLevel -= Math.floor(populationLevel / 1000);
+    if (foodLevel < 0)
+        foodLevel = 0;
+}
+
+function updateWater() {
+    waterLevel -= Math.floor(populationLevel / 1000);
+    if (waterLevel < 0)
+        waterLevel = 0;
 }
 
 function updateHappiness() {
