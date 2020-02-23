@@ -1,8 +1,19 @@
 body {
-    background-image: url("../images/wall-e.jpg");
+    /* background-image: url("../images/farm.png"); */
+    background-repeat: no-repeat;
+    background-color: #c2cfc5;
+
+
     height: 100%;
 }
 
+div{
+    /* background-image: url("../images/farm.png"); */
+    background: color url("../images/farm.png") others;
+    background-repeat: no-repeat;
+    height: 50%;
+    
+}
 head {
     color: blue;
 }
