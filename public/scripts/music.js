@@ -1,3 +1,4 @@
+// Credits to: user2193789 at https://stackoverflow.com/questions/15612120/how-do-i-make-an-audio-file-play-continuously-on-all-pages
 function setCookie(c_name,value,exdays)
 {
     var exdate=new Date();
