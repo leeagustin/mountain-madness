@@ -18,10 +18,6 @@ function harvestFood() {
   }, 10000);
 }
 
-function diplayResults(){
-  document.getElementById("farmProgress").innerHTML = "done :)"
-}
-
 function harvestWater() {
   if (harvestingWater)
     return;
