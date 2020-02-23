@@ -23,6 +23,7 @@ function getCookie(c_name)
 }
 
 var song = document.getElementsByTagName('audio')[0];
+song.volume = 0.5;
 var played = false;
 var tillPlayed = getCookie('timePlayed');
 function update()

@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html onclick="startMusic()">
 
+<link rel="stylesheet" href="/stylesheets/homepage.css">
+
 <audio preload="auto" src="sounds/miisong.mp3" loop="true" autobuffer></audio>
+<audio preload="auto" src="sounds/click1.mp3" loop="false" autobuffer></audio>
+<audio preload="auto" src="sounds/click2.mp3" loop="false" autobuffer></audio>
+<audio preload="auto" src="sounds/click3.mp3" loop="false" autobuffer></audio>
+
 <script>
     let playing = false;
 
@@ -15,20 +21,17 @@
     }
 </script>
 
-<head>
-    <link rel="stylesheet" href="/stylesheets/homepage.css">
-    <audio preload="auto" src="sounds/miisong.mp3" loop="true" autobuffer></audio>
-    <script src="//cdn.jsdelivr.net/npm/phaser@3.22.0/dist/phaser.js"></script>
-    <script src="/scripts/main.js" defer></script>
-    <script src="/scripts/stats.js" defer></script>
-    <script src="/scripts/actions.js" defer></script>
-    <script src="/scripts/events.js" defer></script>
-</head>
+<script src="//cdn.jsdelivr.net/npm/phaser@3.22.0/dist/phaser.js"></script>
+<script src="/scripts/main.js" defer></script>
+<script src="/scripts/stats.js" defer></script>
+<script src="/scripts/actions.js" defer></script>
+<script src="/scripts/events.js" defer></script>
+<script src="/scripts/buttonclick.js" defer></script>
 
 <body onclick = "startMusic()">
-    <img id = "farm" src="images/farm.png" onclick = "harvestFood()">
-    <img id = "energy" src="images/energy.png" onclick = "harvestMetal()">
-    <img id = "water" src="images/water.png" onclick = "harvestWater()">
+    <img id = "farm" src="images/farm.png" onclick = "harvestFood(); playButtonClick();">
+    <img id = "energy" src="images/energy.png" onclick = "harvestMetal(); playButtonClick();">
+    <img id = "water" src="images/water.png" onclick = "harvestWater(); playButtonClick();">
 </body>
 
 </html>

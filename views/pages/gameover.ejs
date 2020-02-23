@@ -2,6 +2,12 @@
 <html onclick="startMusic()">
 
 <audio preload="auto" src="sounds/miisong.mp3" loop="true" autobuffer></audio>
+<audio preload="auto" src="sounds/click1.mp3" loop="false" autobuffer></audio>
+<audio preload="auto" src="sounds/click2.mp3" loop="false" autobuffer></audio>
+<audio preload="auto" src="sounds/click3.mp3" loop="false" autobuffer></audio>
+
+<script src="/scripts/buttonclick.js" defer></script>
+
 <script>
     let playing = false;
 
@@ -47,7 +53,7 @@
 <body>
     <h1>GAME OVER</h1>
     <form action="/home" method="get">
-        <input type="submit" value="TRY AGAIN?">
+        <input onclick="playButtonClick()" type="submit" value="TRY AGAIN?">
     </form>
 </body>
 
