@@ -38,66 +38,69 @@ function harvestMetal() {
         metalLevel += metalHarvestingRate;
         harvestingMetal = false;
     }, 15000);
- 
+
 }
 
 
-function moveFarmProgressBar(){
-  var i = 0;
-  if (i == 0) {
-    i = 1;
-    var elem = document.getElementById("farmBar");
-    var width = 1;
-    var id = setInterval(frame, 100);
-    function frame() {
-      if (width >= 100) {
-        clearInterval(id);
-        i = 0;
-        elem.style.width = 0;
-      } else {
-        width++;
-        elem.style.width = width + "%";
-      }
+function moveFarmProgressBar() {
+    var i = 0;
+    if (i == 0) {
+        i = 1;
+        var elem = document.getElementById("farmBar");
+        var width = 1;
+        var id = setInterval(frame, 100);
+
+        function frame() {
+            if (width >= 100) {
+                clearInterval(id);
+                i = 0;
+                elem.style.width = 0;
+            } else {
+                width++;
+                elem.style.width = width + "%";
+            }
+        }
     }
-  }
 }
 
-function moveMetalProgressBar(){
+function moveMetalProgressBar() {
     var i = 0;
     if (i == 0) {
-      i = 1;
-      var elem = document.getElementById("metalBar");
-      var width = 1;
-      var id = setInterval(frame, 150);
-      function frame() {
-        if (width >= 100) {
-          clearInterval(id);
-          i = 0;
-          elem.style.width = 0;
-        } else {
-          width++;
-          elem.style.width = width + "%";
-        }
-      }
-    }
-  }
+        i = 1;
+        var elem = document.getElementById("metalBar");
+        var width = 1;
+        var id = setInterval(frame, 150);
 
-  function moveWaterProgressBar(){
+        function frame() {
+            if (width >= 100) {
+                clearInterval(id);
+                i = 0;
+                elem.style.width = 0;
+            } else {
+                width++;
+                elem.style.width = width + "%";
+            }
+        }
+    }
+}
+
+function moveWaterProgressBar() {
     var i = 0;
     if (i == 0) {
-      i = 1;
-      var elem = document.getElementById("waterBar");
-      var width = 1;
-      var id = setInterval(frame, 240);
-      function frame() {
-        if (width >= 100) {
-          clearInterval(id);
-          i = 0;
-          elem.style.width = 0;
-        } else {
-          width++;
-          elem.style.width = width + "%";
+        i = 1;
+        var elem = document.getElementById("waterBar");
+        var width = 1;
+        var id = setInterval(frame, 240);
+
+        function frame() {
+            if (width >= 100) {
+                clearInterval(id);
+                i = 0;
+                elem.style.width = 0;
+            } else {
+                width++;
+                elem.style.width = width + "%";
+            }
         }
-      }
     }
-  }
+}
