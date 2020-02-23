@@ -37,7 +37,7 @@ function create() {
 }
 
 function displayAnnouncement(msg) {
-    eventsTextBox.setText('msg');
+    eventsTextBox.setText(msg);
     oneUpSound.loop = false;
     oneUpSound.play();
     setTimeout(() => {
