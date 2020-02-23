@@ -1,5 +1,4 @@
 function harvestFood() {
-    
     foodLevel += 100;
 }
 
