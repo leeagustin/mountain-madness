@@ -22,7 +22,7 @@ function preload() {}
 function create() {
     // buttons
     statsTextbox = this.add.text(10, 10, '', {
-        font: '30px Arial',
+        font: '30px Times',
         fill: '#FFFFFF'
     });
 
