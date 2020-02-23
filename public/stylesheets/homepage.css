@@ -8,8 +8,7 @@ body {
 div {
     background: color url("../images/farm.png") others;
     background-repeat: no-repeat;
-    height: 50%;
-    
+    height: 50%;   
 }
 
 
@@ -19,9 +18,14 @@ div#water{
     height: 50vh;
     position: absolute;
 	bottom: 0;
-	right: 10%;
+	right: 0;
     /* margin-right: 2%; */
   }
+
+img#water{
+    width: 30vh;
+    height: 30vh;
+}
 
 div#metal{
     display: inline-block;
@@ -29,26 +33,32 @@ div#metal{
     height: 50vh;
     position: absolute;
 	bottom: 0;
-	left: 10%;
+	left: 0;
   }
+
+
 head {
     color: blue;
 }
-
 
 div#farm{
     display: inline-block;
     width: 50vh;
     height: 50vh;
     position: absolute;
-	top: 10%;
-	right: 10%;
-  }
+	top: 3vh;
+	right: 0;
+}
+
+img#farm{
+    width: 40vh;
+    height: 20vh;
+}
 
 #myProgress {
     display: inline-block;
     position: absolute;
-    width: 45vh;
+    width: 40vh;
     height: 2vh;
     background-color: grey;
     left: 10%;

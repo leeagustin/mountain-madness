@@ -5,7 +5,15 @@ function initializeRandomEventGenerator() {
         initializeRandomEventGenerator();
         asteroidHitWaterSupply();
         ratsAteFoodSupply();
+        waterLeakage();
     }, 6000);
+}
+
+function waterLeakage() {
+    if (Math.random() < 0.03) {
+        waterRateModifier += 0.5;
+        showEventText('Your water storage has suffered a leakage!');
+    }
 }
 
 function asteroidHitWaterSupply() {
