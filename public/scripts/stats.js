@@ -4,7 +4,10 @@ let waterLevel;
 let happinessLevel;
 let currentEnergyLevel;
 let requiredEnergyLevel;
-let metalLevel = 2000;
+let metalLevel;
+let harvestFoodText = document.getElementById('harvestFoodText');
+let harvestWaterText = document.getElementById('harvestWaterText');
+let harvestMetalText = document.getElementById('harvestMetalText');
 let foodRateModifier = 1;
 let waterRateModifier = 1;
 
@@ -20,6 +23,10 @@ function initializeStats() {
     requiredEnergyLevel = 900;
     engineers = 0;
 
+    harvestFoodText.innerHTML = 'Harvest ' + foodHarvestingRate + ' Food';
+    harvestWaterText.innerHTML = 'Harvest ' + waterHarvestingRate + ' Water';
+    harvestMetalText.innerHTML = 'Harvest ' + metalHarvestingRate + ' Metal';
+
     updateStats();
 }
 
@@ -28,7 +35,7 @@ function updateStats() {
         updateStats();
     }, 1000);
 
-    updatePopulation();        
+    updatePopulation();
     updateFood();
     updateWater();
     updateHappiness();

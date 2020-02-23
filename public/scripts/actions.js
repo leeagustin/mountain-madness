@@ -14,12 +14,7 @@ function harvestFood() {
   setTimeout(() => {
     foodLevel += foodHarvestingRate;
     harvestingFood = false;
-    displayResults();
   }, 10000);
-}
-
-function diplayResults(){
-  document.getElementById("farmProgress").innerHTML = "done :)"
 }
 
 function harvestWater() {
