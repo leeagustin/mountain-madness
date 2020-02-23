@@ -35,23 +35,3 @@ function harvestMetal() {
         harvestingMetal = false;
     });
 }
-
-function upgradeFood() {
-    if (engineers >= 2) {
-        foodHarvestingRate *= 2;
-        engineers -= 2;
-    }
-}
-
-function upgradeWater() {
-    if (engineers >= 2) {
-        waterHarvestingRate *= 2;
-        engineers -= 2;
-    }
-}
-
-function upgradeCurrentEnergy() {
-    if (engineers >= 2) {
-        currentEnergyLevel *= 2;
-    }
-}
