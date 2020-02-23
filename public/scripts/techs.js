@@ -27,7 +27,6 @@ function upgradeFood() {
         engineers -= engineerUpgradeCost;
         foodHarvestingRate *= 2;
         timesFoodUpgraded += 1;
-        document.getElementById("foodVersion").innerHTML = "version " + timesFoodUpgraded + ".0";
         harvestFoodText.innerHTML = 'Harvest ' + foodHarvestingRate + ' Food';
     }
     
@@ -52,7 +51,6 @@ function upgradeWater() {
         engineers -= engineerUpgradeCost;
         waterHarvestingRate *= 2;
         timesWaterUpgraded += 1;
-        document.getElementById("waterVersion").innerHTML = "version " + timesWaterUpgraded + ".0";
         harvestWaterText.innerHTML = 'Harvest ' + waterHarvestingRate + ' Water';
     }
 }
@@ -78,7 +76,6 @@ function upgradeMetal() {
         engineers -= engineerUpgradeCost;
         metalHarvestingRate *= 2;
         timesMetalUpgraded += 1;
-        document.getElementById("metalVersion").innerHTML = "version " + timesMetalUpgraded + ".0"
         harvestMetalText.innerHTML = 'Harvest ' + metalHarvestingRate + ' Metal';
     }
 }
