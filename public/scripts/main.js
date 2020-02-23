@@ -20,37 +20,6 @@ function preload() {}
 
 function create() {
     // buttons
-    const foodButton = this.add.text(WINDOW_WIDTH - 300, 52, 'Food', {
-        font: '20px Arial',
-        fill: '#009900',
-        backgroundColor: 'green'
-    });
-    foodButton.setInteractive();
-    foodButton.on('pointerdown', () => {
-        harvestFood();
-    });
-
-    const waterButton = this.add.text(WINDOW_WIDTH - 300, 31, 'Water', {
-        font: '20px Arial',
-        fill: '#00ffff',
-        backgroundColor: ' blue'
-    });
-    waterButton.setInteractive();
-    waterButton.on('pointerdown', () => {
-        harvestWater();
-    });
-
-    const metalButton = this.add.text(WINDOW_WIDTH - 300, 73, 'Metal', {
-        font: '20px Arial',
-        fill: 'black',
-        backgroundColor: 'white'
-    });
-    metalButton.setInteractive();
-    metalButton.on('pointerdown', () => {
-        harvestMetal();
-    });
-
-
     statsTextbox = this.add.text(10, 10, '', {
         font: '20px Arial',
         fill: '#FFFFFF'

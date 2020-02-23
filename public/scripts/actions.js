@@ -2,6 +2,7 @@ let foodHarvestingRate = 20;
 let waterHarvestingRate = 48;
 let harvestingFood = false;
 let harvestingWater = false;
+let harvestingMetal = false;
 
 function harvestFood() {
     if (harvestingFood)
