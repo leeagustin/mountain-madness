@@ -1,5 +1,6 @@
 let WINDOW_WIDTH = window.innerWidth * 0.985;
 let WINDOW_HEIGHT = window.innerHeight * 0.97;
+
 let config = {
     type: Phaser.AUTO,
     width: WINDOW_WIDTH,
