@@ -1,6 +1,7 @@
 body {
+    background: url("../images/game.jpg");
     background-repeat: no-repeat;
-    background-color: #c2cfc5;
+    background-position: 50% 30%;
     height: 100%;
 }
 

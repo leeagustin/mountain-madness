@@ -21,12 +21,12 @@ function preload() {}
 function create() {
     // buttons
     statsTextbox = this.add.text(10, 10, '', {
-        font: '20px Arial',
+        font: '30px Arial',
         fill: '#FFFFFF'
     });
 
     eventsTextBox = this.add.text(WINDOW_WIDTH / 2, WINDOW_HEIGHT / 6, '', {
-        font: '30px Arial',
+        font: '40px Arial',
         fill: '#FFFFFF'
     }).setOrigin(0.5);
 
@@ -36,13 +36,19 @@ function create() {
 }
 
 function updateEveryFrame() {
-    statsTextbox.setText(
+    let statsText = 
         'Population: ' + populationLevel + ' (Engineers: ' + engineers + ')\n' +
         'Water: ' + waterLevel + '\n' +
         'Food: ' + foodLevel + '\n' +
         'Metal: ' + metalLevel + '\n' +
         'Happiness: ' + happinessLevel + '\n' +
-        'Current Energy: ' + currentEnergyLevel + '\n' +
-        'Required Energy: ' + requiredEnergyLevel
-    );
+        'Energy: ' + currentEnergyLevel;
+    let statsStyle = {fill: '#FFFFFF'}
+
+    if (currentEnergyLevel < requiredEnergyLevel) {
+        statsText += ' (Need ' + requiredEnergyLevel + ' )';
+        statsStyle = {fill: '#FF0000'};
+    }
+
+    statsTextbox.setText(statsText);
 }

@@ -2,6 +2,7 @@ let oneUpSound = new Audio('sounds/1up.wav');
 
 function initializeRandomEventGenerator() {
     setTimeout(() => {
+        initializeRandomEventGenerator();
         asteroidHitWaterSupply();
         ratsAteFoodSupply();
     }, 60000);
@@ -35,5 +36,5 @@ function showEventText(msg) {
     oneUpSound.play();
     setTimeout(() => {
         eventsTextBox.setText('');
-    }, 2000);
+    }, 3000);
 }
