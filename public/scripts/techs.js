@@ -7,9 +7,11 @@ let timesWaterUpgraded = 0;
 let timesMetalUpgraded = 0;
 let timesEnergyUpgraded = 0;
 
-function upgradeFood() {
-    var engineerUpgradeCost = engineerCost[timesFoodUpgraded];
 
+
+function upgradeFood() {
+
+    var engineerUpgradeCost = engineerCost[timesFoodUpgraded];
     if (timesFoodUpgraded >= maxUpgradeLevel) {
         // You have reached the maximum level for this technology
         maxUp('Food');
@@ -25,9 +27,10 @@ function upgradeFood() {
     } else {
         engineers -= engineerUpgradeCost;
         foodHarvestingRate *= 2;
+        timesFoodUpgraded += 1;
+        document.getElementById("foodVersion").innerHTML = "version " + timesFoodUpgraded + ".0"
     }
-
-    timesFoodUpgraded += 1;
+    
 }
 
 function upgradeWater() {
@@ -48,10 +51,12 @@ function upgradeWater() {
     } else {
         engineers -= engineerUpgradeCost;
         waterHarvestingRate *= 2;
+        timesWaterUpgraded += 1;
+        document.getElementById("waterVersion").innerHTML = "version " + timesWaterUpgraded + ".0"
     }
-
-    timesWaterUpgraded += 1;
 }
+
+   
 
 function upgradeMetal() {
     var engineerUpgradeCost = engineerCost[timesMetalUpgraded];
@@ -71,8 +76,9 @@ function upgradeMetal() {
     } else {
         engineers -= engineerUpgradeCost;
         metalHarvestingRate *= 2;
+        timesWaterUpgraded += 1;
+        document.getElementById("waterVersion").innerHTML = "version " + timesWaterUpgraded + ".0"
     }
-
     timesMetalUpgraded += 1;
 }
 
@@ -94,9 +100,11 @@ function upgradeEnergy () {
     } else {
         engineers -= engineerUpgradeCost;
         currentEnergyLevel *= 1.5;
+        timesEnergyUpgraded += 1;
+        
     }
 
-    timesEnergyUpgraded += 1;
+    
 }
 
 function noMetal (cost) {

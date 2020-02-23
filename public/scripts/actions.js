@@ -56,9 +56,9 @@ function moveFarmProgressBar() {
       elem.style.fontWeight = "bold"
       elem.innerHTML = "+"+foodHarvestingRate;
       setTimeout(() => {      
-      elem.style.width = 0;
-      elem.style.color = "grey"; 
-      elem.innerHTML = "...";
+        elem.style.width = 0;
+        elem.style.color = "grey"; 
+        elem.innerHTML = "...";
       clearInterval(id);},1500);
     }else {
       width++;
@@ -78,9 +78,9 @@ function moveMetalProgressBar() {
       elem.style.fontWeight = "bold"
       elem.innerHTML = "+"+metalHarvestingRate;
       setTimeout(() => {      
-      elem.style.width = 0;
-      elem.style.color = "grey"; 
-      elem.innerHTML = "...";
+        elem.style.width = 0;
+        elem.style.color = "grey"; 
+        elem.innerHTML = "...";
       clearInterval(id);},1500);
     } else {
       width++;
@@ -100,9 +100,9 @@ function moveWaterProgressBar() {
       elem.style.fontWeight = "bold"
       elem.innerHTML = "+"+waterHarvestingRate;
       setTimeout(() => {      
-      elem.style.width = 0;
-      elem.style.color = "grey"; 
-      elem.innerHTML = "...";
+        elem.style.width = 0;
+        elem.style.color = "grey"; 
+        elem.innerHTML = "...";
       clearInterval(id);},1500);
     } else {
       width++;
