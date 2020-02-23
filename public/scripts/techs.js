@@ -77,9 +77,8 @@ function upgradeMetal() {
         engineers -= engineerUpgradeCost;
         metalHarvestingRate *= 2;
         timesWaterUpgraded += 1;
-        document.getElementById("waterVersion").innerHTML = "version " + timesWaterUpgraded + ".0"
+        document.getElementById("metalVersion").innerHTML = "version " + timesMetalUpgraded + ".0"
     }
-    timesMetalUpgraded += 1;
 }
 
 function upgradeEnergy () {
