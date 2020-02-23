@@ -38,15 +38,26 @@ function create() {
         font: WINDOW_HEIGHT * 0.045 + 'px sans-serif',
         fill: "green"
     }); 
+    
+    waterWarningbox = this.add.text(165, 60, ' ', {
+        font: WINDOW_HEIGHT * 0.045 + 'px sans-serif',
+        fill: "red"
+    }); 
 
     metalTextbox = this.add.text(170, 122, ' ', {
         font: WINDOW_HEIGHT * 0.045 + 'px sans-serif',
         fill: "green"
     }); 
 
+
     foodTextbox = this.add.text(170, 91, ' ', {
         font: WINDOW_HEIGHT * 0.045 + 'px sans-serif',
         fill: "green"
+    }); 
+
+    foodWarningbox = this.add.text(165, 91, ' ', {
+        font: WINDOW_HEIGHT * 0.045 + 'px sans-serif',
+        fill: "red"
     }); 
 
     timerTextbox = this.add.text(WINDOW_WIDTH * 0.85, WINDOW_HEIGHT * 0.05, '', {
@@ -82,9 +93,20 @@ function updateEveryFrame() {
         'Happiness: ' + happinessLevel + '\n' +
         'Energy: ' + currentEnergyLevel + ' (Need ' + requiredEnergyLevel + ')'
     );
+    if(waterLevel <= 5){
+        waterWarningbox.setText('!');
+    }else{
+        waterWarningbox.setText(' ');
+    }
+    if(foodLevel <= 5){
+        foodWarningbox.setText('!');
+    }else{
+        foodWarningbox.setText(' ');
+    }
 
     timerTextbox.setText('Time Left: ' + Math.floor(timeLeft / 60) + 'm ' + timeLeft % 60 + 's');
 }
+
 
 function displayAddedWater(){
     waterTextbox.setText('+' + waterHarvestingRate);
