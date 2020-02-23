@@ -73,7 +73,6 @@ function moveMetalProgressBar() {
 }
 
 function moveWaterProgressBar() {
-
   var elem = document.getElementById("waterProgress");
   var width = 1;
   var id = setInterval(frame, 240);
