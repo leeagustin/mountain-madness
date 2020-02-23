@@ -6,10 +6,12 @@ let isWaterLeaking = false;
 function initializeRandomEventGenerator() {
     setTimeout(() => {
         initializeRandomEventGenerator();
-        asteroidHitWaterSupply();
-        ratsAteFoodSupply();
-        foodSpoilage();
-        waterLeakage();
+        if (timeLeft < 540) {
+            asteroidHitWaterSupply();
+            ratsAteFoodSupply();
+            foodSpoilage();
+            waterLeakage();
+        }
     }, 6000);
 }
 
