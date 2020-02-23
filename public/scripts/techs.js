@@ -1,4 +1,4 @@
-let cost = [1, 1, 2, 2, 3, 3, 4, 4];
+let engineerCost = [1, 1, 2, 2, 3, 3, 4, 4];
 let maxUpgradeLevel = 8;
 
 let timesFoodUpgraded = 0;
@@ -6,7 +6,7 @@ let timesWaterUpgraded = 0;
 let timesEnergyUpgraded = 0;
 
 function upgradeFoodHarvest () {
-    var upgradeCost = cost[timesFoodUpgraded];
+    var upgradeCost = engineerCost[timesFoodUpgraded];
 
     if (engineers >= upgradeCost && timesFoodUpgraded <= maxUpgradeLevel) {
         engineers -= upgradeCost;
@@ -17,7 +17,7 @@ function upgradeFoodHarvest () {
 }
 
 function upgradeWaterHarvest () {
-    var upgradeCost = cost[timesWaterUpgraded];
+    var upgradeCost = engineerCost[timesWaterUpgraded];
 
     if (engineers >= upgradeCost && timesWaterUpgraded <= maxUpgradeLevel) {
         engineers -= upgradeCost;
@@ -28,7 +28,7 @@ function upgradeWaterHarvest () {
 }
 
 function upgradeEnergyHarvest () {
-    var upgradeCost = cost[timesEnergyUpgraded];
+    var upgradeCost = engineerCost[timesEnergyUpgraded];
 
     if (engineers >= upgradeCost && timesEnergyUpgraded <= maxUpgradeLevel) {
         engineers -= upgradeCost;
