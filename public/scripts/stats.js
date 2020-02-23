@@ -5,6 +5,8 @@ let happinessLevel;
 let currentEnergyLevel;
 let requiredEnergyLevel;
 let metalLevel;
+let foodRateModifier = 1;
+let waterRateModifier = 1;
 
 let engineers;
 let scientists;
@@ -50,14 +52,14 @@ function updatePopulation() {
     }
 }
 
-function updateFood() {  
-    foodLevel -= Math.floor(populationLevel / 1000);
+function updateFood() {
+    foodLevel -= Math.floor(populationLevel * foodRateModifier / 1000);
     if (foodLevel < 0)
         foodLevel = 0;
 }
 
 function updateWater() {
-    waterLevel -= Math.floor(populationLevel / 1000);
+    waterLevel -= Math.floor(populationLevel * waterRateModifier / 1000);
     if (waterLevel < 0)
         waterLevel = 0;
 }
