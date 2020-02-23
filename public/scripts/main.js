@@ -21,29 +21,25 @@ let testingTextbox;
 let img1 = new Image();
 let timeLeft = 600;
 
-function preload() {
-    this.load.image("panel", "../images/monitor.jpg");
-}
+function preload() {}
 
 function create() {
     // buttons
-    this.add.image(WINDOW_WIDTH * 0.1, WINDOW_HEIGHT * 0.4, "panel").setOrigin(0.9, 1)
-
     statsTextbox = this.add.text(30, 30, ' ', {
         font: WINDOW_HEIGHT * 0.045 + 'px sans-serif',
         fill: "#FFFFFF"
     });
 
     waterTextbox = this.add.text(170, 60, ' ', {
-        font: WINDOW_HEIGHT * 0.045 + 'px sans-serif'
+        font: WINDOW_HEIGHT * 0.045 + 'px sans-serif',
     });
 
     metalTextbox = this.add.text(170, 122, ' ', {
-        font: WINDOW_HEIGHT * 0.045 + 'px sans-serif'
+        font: WINDOW_HEIGHT * 0.045 + 'px sans-serif',
     });
 
     foodTextbox = this.add.text(170, 91, ' ', {
-        font: WINDOW_HEIGHT * 0.045 + 'px sans-serif'
+        font: WINDOW_HEIGHT * 0.045 + 'px sans-serif',
     });
 
     timerTextbox = this.add.text(WINDOW_WIDTH * 0.85, WINDOW_HEIGHT * 0.05, '', {
@@ -52,7 +48,7 @@ function create() {
     });
 
     eventsTextbox = this.add.text(WINDOW_WIDTH * 0.6, WINDOW_HEIGHT / 4, '', {
-        font: WINDOW_HEIGHT * 0.07 + 'px sans-serif',
+        font: WINDOW_HEIGHT * 0.08 + 'px sans-serif',
         fill: '#FFFFFF'
     }).setOrigin(0.5);
 
