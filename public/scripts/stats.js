@@ -2,7 +2,7 @@ let foodLevel;
 let waterLevel;
 let happinessLevel;
 let energyLevel;
-let metalLevel
+let metalLevel;
 
 function initializeStats() {
     populationLevel = 100;
