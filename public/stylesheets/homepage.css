@@ -40,28 +40,29 @@ img {
     position: relative;
     width: 100%;
     height: 2vh;
+    border-radius: 1vh;
     background-color: grey;
 }
 
 #farmProgress {
-    width: 1%;
+    width: 0%;
     height: 2vh;
+    border-radius: 1vh;
     background-color: green;
-    margin: 0vh;
 }
 
 #metalProgress {
-    width: 1%;
+    width: 0%;
     height: 2vh;
-    background-color: green;
-    margin: 0vh;
+    border-radius: 1vh;
+    background-color: darkslategray;
 }
 
 #waterProgress {
-    width: 1%;
+    width: 0%;
     height: 2vh;
-    background-color: green;
-    margin: 0vh;
+    border-radius: 1vh;
+    background-color: cornflowerblue;
 }
 
 div#lab {
