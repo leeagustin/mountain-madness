@@ -117,7 +117,7 @@ function fixFoodSpoiling() {
         isFoodSpoiling = false;
         engineers -= 1;
 
-        var alert = getElementById("foodSpoilageAlert");
+        var alert = document.getElementById("foodSpoilageAlert");
         alert.style.visibility = "hidden";
     }
 }
@@ -128,7 +128,7 @@ function fixWaterLeakage() {
         isWaterLeaking = false;
         engineers -= 1;
 
-        var alert = getElementById("waterLeakageAlert");
+        var alert = document.getElementById("waterLeakageAlert");
         alert.style.visibility = "hidden";
     }
 }

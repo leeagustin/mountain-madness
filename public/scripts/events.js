@@ -14,7 +14,7 @@ function initializeRandomEventGenerator() {
 }
 
 function foodSpoilage() {
-    if (Math.random() < 0.99 && !isFoodSpoiling) {
+    if (Math.random() < 0.01 && !isFoodSpoiling) {
         foodRateModifier += 1;
         displayAnnouncement('Event: Your food is spoiling!');
         isFoodSpoiling = true;
