@@ -64,7 +64,8 @@ function create() {
 }
 
 function updateEveryFrame() {
-    statsTextbox.setText('Population: ' + populationLevel + ' (Engineers:' + engineers + ')\n' +
+    statsTextbox.setText(
+        'Population: ' + populationLevel + ' (Engineers:' + engineers + ')\n' +
         'Water: ' + waterLevel + '\n' +
         'Food: ' + foodLevel + '\n' +
         'Metal: ' + metalLevel + '\n' +
