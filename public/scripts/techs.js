@@ -2,10 +2,10 @@ let engineerCost = [1, 1, 2, 2, 3, 3, 4, 4];
 let maxUpgradeLevel = 8;
 let metalCostPerLevel = 100;
 
-let timesFoodUpgraded = 0;
-let timesWaterUpgraded = 0;
-let timesMetalUpgraded = 0;
-let timesEnergyUpgraded = 0;
+let timesFoodUpgraded = 1;
+let timesWaterUpgraded = 1;
+let timesMetalUpgraded = 1;
+let timesEnergyUpgraded = 1;
 
 
 
@@ -76,7 +76,7 @@ function upgradeMetal() {
     } else {
         engineers -= engineerUpgradeCost;
         metalHarvestingRate *= 2;
-        timesWaterUpgraded += 1;
+        timesMetalUpgraded += 1;
         document.getElementById("metalVersion").innerHTML = "version " + timesMetalUpgraded + ".0"
     }
 }
