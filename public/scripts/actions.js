@@ -16,7 +16,6 @@ function harvestFood() {
         foodLevel += foodHarvestingRate;
         harvestingFood = false;
     }, 10000);
-    clearFarmBar();
 }
 
 function harvestWater() {
