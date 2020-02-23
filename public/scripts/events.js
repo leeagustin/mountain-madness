@@ -5,18 +5,18 @@ function initializeRandomEventGenerator() {
         initializeRandomEventGenerator();
         asteroidHitWaterSupply();
         ratsAteFoodSupply();
-    }, 60000);
+    }, 6000);
 }
 
 function asteroidHitWaterSupply() {
-    if (Math.random() < 0.3) {
+    if (Math.random() < 0.03) {
         waterLevel -= 1000;
         showEventText('An asteroid has hit your water supply!');
     }
 }
 
 function ratsAteFoodSupply() {
-    if (Math.random() < 0.3) {
+    if (Math.random() < 0.03) {
         foodLevel -= 1000;
         showEventText('Rats ate some of the food supply!');
     }
