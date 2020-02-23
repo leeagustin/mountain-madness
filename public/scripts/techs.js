@@ -1,14 +1,22 @@
 let engineerCost = [1, 1, 2, 2, 3, 3, 4, 4];
 let maxUpgradeLevel = 8;
+let metalCostPerLevel = 100;
 
 let timesFoodUpgraded = 0;
 let timesWaterUpgraded = 0;
+let timesMetalUpgraded = 0;
 let timesEnergyUpgraded = 0;
 
 function upgradeFoodHarvest () {
     var engineerUpgradeCost = engineerCost[timesFoodUpgraded];
 
-    if (engineers >= engineerUpgradeCost && timesFoodUpgraded <= maxUpgradeLevel) {
+    if (timesFoodUpgraded > maxUpgradeLevel) {
+        // You have reached the maximum level for this technology
+    } else if (engineers < engineerUpgradeCost) {
+        // You do not have enough engineers
+    } else if (metalLevel < metalCostPerLevel * (timesFoodUpgraded + 1)) {
+        // You do not have enough metal
+    } else {
         engineers -= engineerUpgradeCost;
         foodHarvestingRate *= 2;
     }
@@ -19,7 +27,13 @@ function upgradeFoodHarvest () {
 function upgradeWaterHarvest () {
     var engineerUpgradeCost = engineerCost[timesWaterUpgraded];
 
-    if (engineers >= engineerUpgradeCost && timesWaterUpgraded <= maxUpgradeLevel) {
+    if (timesWaterUpgraded > maxUpgradeLevel) {
+        // You have reached the maximum level for this technology
+    } else if (engineers < engineerUpgradeCost) {
+        // You do not have enough engineers
+    } else if (metalLevel < metalCostPerLevel * (timesWaterUpgraded + 1)) {
+        // You do not have enough metal
+    } else {
         engineers -= engineerUpgradeCost;
         waterHarvestingRate *= 2;
     }
@@ -27,12 +41,35 @@ function upgradeWaterHarvest () {
     timesWaterUpgraded += 1;
 }
 
-function upgradeEnergyHarvest () {
+function upgradeMetalHarvest () {
+    var engineerUpgradeCost = engineerCost[timesMetalUpgraded];
+
+    if (timesMetalUpgraded > maxUpgradeLevel) {
+        // You have reached the maximum level for this technology
+    } else if (engineers < engineerUpgradeCost) {
+        // You do not have enough engineers
+    } else if (metalLevel < metalCostPerLevel * (timesMetalUpgraded + 1)) {
+        // You do not have enough metal
+    } else {
+        engineers -= engineerUpgradeCost;
+        metalHarvestingRate *= 2;
+    }
+
+    timesMetalUpgraded += 1;
+}
+
+function upgradeEnergy () {
     var engineerUpgradeCost = engineerCost[timesEnergyUpgraded];
 
-    if (engineers >= engineerUpgradeCost && timesEnergyUpgraded <= maxUpgradeLevel) {
+    if (timesEnergyUpgraded > maxUpgradeLevel) {
+        // You have reached the maximum level for this technology
+    } else if (engineers < engineerUpgradeCost) {
+        // You do not have enough engineers
+    } else if (metalLevel < metalCostPerLevel * (timesEnergyUpgraded + 1)) {
+        // You do not have enough metal
+    } else {
         engineers -= engineerUpgradeCost;
-        energyHarvestingRate *= 2;
+        currentEnergyLevel *= 1.5;
     }
 
     timesEnergyUpgraded += 1;
