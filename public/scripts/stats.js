@@ -28,9 +28,10 @@ function updateStats() {
         updateStats();
     }, 1000);
 
+    updatePopulation();        
     updateFood();
     updateWater();
-    updatePopulation();
+    updateHappiness();
     updateEnergyRequirement();
 }
 
@@ -63,7 +64,10 @@ function updateWater() {
 
 function updateHappiness() {
     if (requiredEnergyLevel > currentEnergyLevel)
-        happiness -= (requiredEnergyLevel - currentEnergyLevel) / 25;
+        happinessLevel -= (requiredEnergyLevel - currentEnergyLevel) / 25;
+
+    if (happinessLevel <= 0)
+        window.location.href = '/gameover';
 }
 
 function updateEnergyRequirement() {
