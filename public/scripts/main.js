@@ -1,5 +1,5 @@
 let WINDOW_WIDTH = window.innerWidth * 0.985;
-let WINDOW_HEIGHT = window.innerHeight * 0.97;
+let WINDOW_HEIGHT = window.innerHeight * 0.80;
 
 let config = {
     type: Phaser.AUTO,
@@ -16,18 +16,28 @@ let config = {
 let game = new Phaser.Game(config);
 let statsTextbox;
 let eventsTextbox;
+let testingTextbox;
+var img1 = new Image();
 
-function preload() {}
+
+function preload() {
+    this.load.image("panel", "../images/monitor.jpg");
+
+}
 
 function create() {
     // buttons
-    statsTextbox = this.add.text(10, 10, '', {
+    this.add.image(270, 250, "panel").setOrigin(0.9,1)
+
+    statsTextbox = this.add.text(30, 30, ' ', {
         font: '30px Times',
-        fill: '#FFFFFF'
+        fill: "#FFFFFF"
     });
 
-    eventsTextBox = this.add.text(WINDOW_WIDTH / 2, WINDOW_HEIGHT / 6, '', {
-        font: '40px Arial',
+
+
+    eventsTextBox = this.add.text(WINDOW_WIDTH / 2, WINDOW_HEIGHT / 2, '', {
+        font: '40px Times',
         fill: '#FFFFFF'
     }).setOrigin(0.5);
 
@@ -54,4 +64,6 @@ function updateEveryFrame() {
         'Happiness: ' + happinessLevel + '\n' +
         'Energy: ' + currentEnergyLevel + ' (Need ' + requiredEnergyLevel + ')'
     );
+
+    
 }
