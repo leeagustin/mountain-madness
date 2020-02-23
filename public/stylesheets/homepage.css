@@ -66,13 +66,6 @@ img {
     background-color: cornflowerblue;
 }
 
-div#lab {
-    display: inline-block;
-    width: 10vh;
-    height: 40vh;
-    position: relative;
-}
-
 p#label {
     font-size: 18pt;
     font-family: 'Times New Roman', Times, serif;
