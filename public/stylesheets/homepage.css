@@ -69,3 +69,22 @@ img#farm{
     height: 2vh;
     background-color: green;
   }
+
+div#lab{
+    display: inline-block;
+    width: 10vh;
+    height: 40vh;
+    position: absolute;
+	bottom: 10%;
+	left: 10%;
+}
+/*
+span#myPopup{
+    display: inline-block;
+    width: 40vh;
+    height: 30vh;
+    position: absolute;
+	bottom: 10%;
+	left: 10%;
+}
+*/
