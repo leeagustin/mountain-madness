@@ -72,6 +72,11 @@ div#lab {
     position: relative;
 }
 
+p#label {
+    font-size: 14pt;
+    font-family: 'Times New Roman', Times, serif;
+    color: grey;
+}
 /*
 span#myPopup{
     display: inline-block;
