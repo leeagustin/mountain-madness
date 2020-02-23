@@ -1,12 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html onclick="startMusic()">
 
 <audio preload="auto" src="sounds/miisong.mp3" loop="true" autobuffer></audio>
 <script>
+    let playing = false;
+
     function startMusic() {
-        let scriptTag = document.createElement('script');
-        scriptTag.setAttribute('src', 'scripts/music.js');
-        document.head.appendChild(scriptTag);
+        if (!playing) {
+            playing = true;
+            let scriptTag = document.createElement('script');
+            scriptTag.setAttribute('src', 'scripts/music.js');
+            document.head.appendChild(scriptTag);
+        }
     }
 </script>
 
@@ -20,10 +25,10 @@
     <script src="/scripts/events.js" defer></script>
 </head>
 
-<body onclick = "startMusic()">
-    <img id = "farm" src="images/farm.png" >
-    <img id = "energy" src="images/energy.png" >
-    <img id = "water" src="images/water.png" >
+<body onclick="startMusic()">
+    <img id="farm" src="images/farm.png">
+    <img id="energy" src="images/energy.png">
+    <img id="water" src="images/water.png">
 </body>
 
 </html>

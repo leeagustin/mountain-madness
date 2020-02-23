@@ -1,12 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html onclick="startMusic()">
 
 <audio preload="auto" src="sounds/miisong.mp3" loop="true" autobuffer></audio>
 <script>
+    let playing = false;
+
     function startMusic() {
-        let scriptTag = document.createElement('script');
-        scriptTag.setAttribute('src', 'scripts/music.js');
-        document.head.appendChild(scriptTag);
+        if (!playing) {
+            playing = true;
+            let scriptTag = document.createElement('script');
+            scriptTag.setAttribute('src', 'scripts/music.js');
+            document.head.appendChild(scriptTag);
+        }
     }
 </script>
 
@@ -39,9 +44,9 @@
     }
 </style>
 
-<body onclick = "startMusic()">
+<body>
     <h1>GAME OVER</h1>
-    <button onclick = "window.location.href = '/home'">TRY AGAIN?</button>
+    <button onclick="window.location.href = '/home'">TRY AGAIN?</button>
 </body>
 
 </html>
