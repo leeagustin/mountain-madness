@@ -64,7 +64,20 @@ img#farm{
     left: 10%;
   }
   
-  #myBar {
+#farmBar {
+    width: 1%;
+    height: 2vh;
+    background-color: green;
+  }
+
+#metalBar {
+    width: 1%;
+    height: 2vh;
+    background-color: green;
+  }
+
+
+#waterBar {
     width: 1%;
     height: 2vh;
     background-color: green;

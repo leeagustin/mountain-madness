@@ -25,9 +25,21 @@
 
 <body onclick = "startMusic()">
     <div class="popup" id="lab" onclick="lab(); playButtonClick();">Laboratory</div>
-    <img id = "farm" src="images/farm.png" onclick = "harvestFood(); playButtonClick();">
-    <img id = "energy" src="images/metal.png" onclick = "harvestMetal(); playButtonClick();">
-    <img id = "water" src="images/water.png" onclick = "harvestWater(); playButtonClick();">
+    <div id = "farm"></div>
+        <div id="myProgress"><div id="farmBar"></div>progress</div><br>
+        <img id = "farm" src="images/farm.png" onclick = "harvestFood(); playButtonClick();">   
+    </div>
+
+    <div id = "metal">
+        <img id = "metal" src="images/metal.png" onclick = "harvestMetal(); playButtonClick();">   
+        <div id="myProgress"><div id="metalBar"></div>progress</div>
+    </div>
+
+    <div id = "water">
+        <div id="myProgress"><div id="waterBar"></div>progress</div><br><br>
+        <img id = "water" src="images/water.png" onclick = "harvestWater(); playButtonClick();">   
+        
+    </div> -->
 </body>
 
 </html>
