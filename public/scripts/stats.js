@@ -28,7 +28,8 @@ function updateStats() {
         updateStats();
     }, 1000);
 
-    updateFoodAndWater();
+    updateFood();
+    updateWater();
     updatePopulation();
     updateEnergyRequirement();
 }
