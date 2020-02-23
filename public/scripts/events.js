@@ -2,9 +2,18 @@ let oneUpSound = new Audio('sounds/1up.wav');
 
 function initializeRandomEventGenerator() {
     setTimeout(() => {
+        initializeRandomEventGenerator();
         asteroidHitWaterSupply();
         ratsAteFoodSupply();
+        waterLeakage();
     }, 60000);
+}
+
+function waterLeakage() {
+    if (Math.random() < 0.3) {
+        waterRateModifier += 0.5;
+        showEventText('Your water storage has suffered a leakage!');
+    }
 }
 
 function asteroidHitWaterSupply() {
@@ -35,5 +44,5 @@ function showEventText(msg) {
     oneUpSound.play();
     setTimeout(() => {
         eventsTextBox.setText('');
-    }, 2000);
+    }, 3000);
 }
