@@ -93,6 +93,25 @@ img#upgradeMetal {
     width: 10vh;
     height: 10vh;
 }
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #008CBA;
+  }
+
+  #action:hover .overlay {
+    opacity: 0.5;
+  }
+
 /*
 span#myPopup{
     display: inline-block;
