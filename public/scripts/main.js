@@ -57,12 +57,19 @@ function create() {
         font: '30px Arial',
         fill: '#FFFFFF'
     }).setOrigin(0.5);
-    
+
     initializeStats();
     initializeRandomEventGenerator();
     createEngineer();
 }
 
 function updateEveryFrame() {
-    statsTextbox.setText(`Population: ${populationLevel} (Engineers: ${engineers})\nWater: ${waterLevel}\nFood: ${foodLevel}\nMetal: ${metalLevel}\nHappiness: ${happinessLevel}\nCurrent Energy: ${currentEnergyLevel}\nRequired Energy: ${requiredEnergyLevel}`);
+    statsTextbox.setText('Population: ' + populationLevel + ' (Engineers:' + engineers + ')\n' +
+        'Water: ' + waterLevel + '\n' +
+        'Food: ' + foodLevel + '\n' +
+        'Metal: ' + metalLevel + '\n' +
+        'Happiness: ' + happinessLevel + '\n' +
+        'Current Energy: ' + currentEnergyLevel + '\n' +
+        'Required Energy: ' + requiredEnergyLevel
+    );
 }
