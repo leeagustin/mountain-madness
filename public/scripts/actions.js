@@ -5,30 +5,47 @@ let harvestingFood = false;
 let harvestingWater = false;
 let harvestingMetal = false;
 
-function harvestFood() {
-  if (harvestingFood)
-    return;
-  harvestingFood = true;
-  moveFarmProgressBar();
+harvestMetalCostPerLevel = 10;
 
-  setTimeout(() => {
-    foodLevel += foodHarvestingRate;
-    harvestingFood = false;
-    displayAddedFood();
-  }, 10000);
+function harvestFood() {
+    if (harvestingFood)
+    {
+        return;
+    } 
+    harvestMetalCost = harvestMetalCostPerLevel * timesFoodUpgraded;
+    if (metalLevel < harvestMetalCost) {
+        noMetal(harvestMetalCost - metalLevel);
+        return;
+    }
+    harvestingFood = true;
+    metalLevel -= harvestMetalCost;
+    moveFarmProgressBar();
+
+    setTimeout(() => {
+        foodLevel += foodHarvestingRate;
+        harvestingFood = false;
+        displayAddedFood();
+    }, 10000);
 }
 
 function harvestWater() {
-  if (harvestingWater)
+    if (harvestingWater)
+    {
     return;
-  harvestingWater = true;
-  moveWaterProgressBar();
-  setTimeout(() => {
-    waterLevel += waterHarvestingRate;
-    harvestingWater = false;
-    displayAddedWater();
-  }, 13000);
-
+    }
+    harvestMetalCost = harvestMetalCostPerLevel * timesWaterUpgraded;
+    if (metalLevel < harvestMetalCost) {
+        noMetal(harvestMetalCost - metalLevel);
+        return;
+    }
+    harvestingWater = true;
+    metalLevel -= harvestMetalCost;
+    moveWaterProgressBar();
+    setTimeout(() => {
+        waterLevel += waterHarvestingRate;
+        harvestingWater = false;
+        displayAddedWater();
+    }, 13000);
 }
 
 function harvestMetal() {

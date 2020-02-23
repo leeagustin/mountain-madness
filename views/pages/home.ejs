@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html onclick="startMusic()">
 
-<link rel="stylesheet" href="/stylesheets/homepage.css">
+<link rel="stylesheet" href="/stylesheets/home.css">
 
 <script>
     let playing = false;
@@ -42,10 +42,12 @@
 <script src="/scripts/techs.js" defer></script>
 
 
+<body onclick="startMusic(); startTimer();">
+    
+    
 <body onmouseover="startTimer()">
+    <div class="stats-container"></div>
     <div class="actions-container">
-
-
         <div class="action">
             <div class="container" onclick="harvestFood(); playButtonClick();">
                 <img src="images/farm.png">
