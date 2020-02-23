@@ -160,6 +160,14 @@ p#label {
     width: 25%;
 }
 
+.container_up_energy {
+    left: 0;
+    display: inline-flex;
+    position: relative;
+    width: 27%;
+}
+
+
 .text_up {
     color: white;
     font-size: 12px;

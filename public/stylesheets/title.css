@@ -1,3 +1,25 @@
+html {
+    background-image: url("../images/wall-e.jpg");
+    background-position: 50% 60%;
+    height: 100%;
+    text-align: center;
+}
+
+body {
+    margin-top: 13%;
+}
+
+input {
+    background-color: cornflowerblue;
+    color: white;
+    font-size: 9vh;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    border-radius: 10vh;
+    border-style: hidden;
+    padding: 6vh;
+    margin: 2vh;
+}
+
 /* The Modal (background) */
 .modal {
     display: none; /* Hidden by default */
@@ -14,11 +36,13 @@
 
 /* Modal Content/Box */
 .modal-content {
-    background-color: #fefefe;
+    background-color: whitesmoke;
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
-    border: 1px solid #888;
     width: 80%; /* Could be more or less, depending on screen size */
+    border: 2vh solid cornflowerblue;
+    border-radius: 5vh;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 
 /* The Close Button */
@@ -34,5 +58,14 @@
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
 
+#myBtn {
+    background-color: cornflowerblue;
+    color: white;
+    font-size: 5vh;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    border-radius: 8vh;
+    border-style: hidden;
+    padding: 6vh;
 }

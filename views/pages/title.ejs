@@ -8,30 +8,11 @@
 <script src="/scripts/buttonclick.js" defer></script>
 <script src="/scripts/rules.js" defer></script>
 
-<style>
-    html {
-        background-image: url("../images/wall-e.jpg");
-        background-position: 50% 60%;
-        height: 100%;
-        text-align: center;
-    }
-
-    body {
-        margin-top: 20%;
-    }
-
-    input {
-        background-color: cornflowerblue;
-        color: white;
-        font-size: 9vh;
-        font-family: "Trebuchet MS", Helvetica, sans-serif;
-        border-radius: 10vh;
-        border-style: hidden;
-        padding: 6vh;
-    }
-</style>
-
 <body><!-- Trigger/Open The Modal -->
+    <form action="/home" method="get">
+        <input onclick="playButtonClick()" type="submit" value="BEGIN">
+    </form>
+
     <button id="myBtn" onclick="displayRules();">Rules</button>
     
     <!-- The Modal -->
@@ -43,12 +24,8 @@
         <h1>Rules</h1>
         <p>Win by surviving 10 minutes</p>
         <p>Don't let happiness fall to zero</p>
-        <p>Good luck</p>
+        <p>Good luck!</p>
       </div>
     
     </div>
-
-    <form action="/home" method="get">
-        <input onclick="playButtonClick()" type="submit" value="BEGIN">
-    </form>
 </body>
