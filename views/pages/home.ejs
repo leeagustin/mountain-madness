@@ -5,6 +5,7 @@
 
 <script>
     let playing = false;
+    let timerStarted = false;
 
     function startMusic() {
         if (!playing) {
@@ -13,6 +14,18 @@
             scriptTag.setAttribute('src', 'scripts/music.js');
             document.head.appendChild(scriptTag);
         }
+    }
+
+    function startTimer() {
+        if (!timerStarted)
+            decreaseTimer();
+    }
+
+    function decreaseTimer() {
+        setTimeout(() => {
+            timeLeft -= 1;
+            decreaseTimer();
+        }, 1000);
     }
 </script>
 
@@ -25,7 +38,7 @@
 <script src="/scripts/techs.js" defer></script>
 
 
-<body onclick="startMusic()">
+<body onclick="startMusic(); startTimer();">
     <div class="actions-container">
         
         <div class="action">
