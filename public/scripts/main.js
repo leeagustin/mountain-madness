@@ -27,7 +27,7 @@ function preload() {
 
 function create() {
     // buttons
-    this.add.image(270, 250, "panel").setOrigin(0.9,1)
+    this.add.image(WINDOW_WIDTH * 0.1, WINDOW_HEIGHT * 0.4, "panel").setOrigin(0.9,1)
 
     statsTextbox = this.add.text(30, 30, ' ', {
         font: '30px Times',
@@ -36,8 +36,8 @@ function create() {
 
 
 
-    eventsTextBox = this.add.text(WINDOW_WIDTH / 2, WINDOW_HEIGHT / 2, '', {
-        font: '40px Times',
+    eventsTextBox = this.add.text(WINDOW_WIDTH * 0.6, WINDOW_HEIGHT / 4, '', {
+        font: '45px Times',
         fill: '#FFFFFF'
     }).setOrigin(0.5);
 

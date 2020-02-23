@@ -9,7 +9,7 @@ body {
 canvas {
     position: absolute;
     left: 1vh;
-    top: 0vh;
+    top: 1vh;
     z-index: 0;
 }
 
@@ -29,7 +29,7 @@ img {
 .action {
     display: inline-block;
     position: relative;
-    width: 20%;
+    width: 17%;
     margin-left: 5%;
     margin-right: 5%;
 }
@@ -71,7 +71,7 @@ img {
 #farmProgress {
     width: 0%;
     height: 3vh;
-    
+
     border-radius: 1vh;
     background-color: green;
 }
@@ -113,15 +113,15 @@ p#label {
     opacity: 0;
     transition: .5s ease;
     background-color: grey;
-  }
+}
 
 .container:hover .overlay {
     opacity: 0.75;
-  }
+}
 
 .container_up:hover .overlay {
     opacity: 0.75;
-  }
+}
 
 .text {
     color: white;
@@ -133,17 +133,16 @@ p#label {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     text-align: center;
-  }
+}
 
 .container_up {
     left: 0;
     display: inline-flex;
     position: relative;
-    width: 10vh;
-    height: 10vh;
+    width: 25%;
 }
 
-.text_up{
+.text_up {
     color: white;
     font-size: 12px;
     position: absolute;
@@ -153,5 +152,4 @@ p#label {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     text-align: center;
-  }
-
+}
