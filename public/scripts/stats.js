@@ -36,7 +36,7 @@ function updateStats() {
 }
 
 function updatePopulation() {
-    populationLevel += Math.floor(populationLevel / 400);
+    populationLevel += Math.floor(populationLevel / 150);
 
     if (foodLevel <= 0) {
         let dead = Math.floor(populationLevel / 125);
@@ -64,7 +64,7 @@ function updateWater() {
 
 function updateHappiness() {
     if (requiredEnergyLevel > currentEnergyLevel)
-        happinessLevel -= (requiredEnergyLevel - currentEnergyLevel) / 25;
+        happinessLevel -= Math.ceil((requiredEnergyLevel - currentEnergyLevel) / 25);
 
     if (happinessLevel <= 0)
         window.location.href = '/gameover';

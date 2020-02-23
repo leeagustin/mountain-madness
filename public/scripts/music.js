@@ -22,7 +22,7 @@ function getCookie(c_name)
       }
 }
 
-var song = document.getElementsByTagName('audio')[0];
+var song = new Audio("sounds/miisong.mp3");
 song.volume = 0.5;
 var played = false;
 var tillPlayed = getCookie('timePlayed');

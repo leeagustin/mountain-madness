@@ -1,3 +1,5 @@
+let oneUpSound = new Audio('sounds/1up.wav');
+
 function initializeRandomEventGenerator() {
     setTimeout(() => {
         asteroidHitWaterSupply();
@@ -29,6 +31,8 @@ function createEngineer() {
 
 function showEventText(msg) {
     eventsTextBox.setText(`Event: ${msg}`);
+    oneUpSound.loop = false;
+    oneUpSound.play();
     setTimeout(() => {
         eventsTextBox.setText('');
     }, 2000);
