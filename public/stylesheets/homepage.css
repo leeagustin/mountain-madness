@@ -119,6 +119,7 @@ p#label {
     opacity: 0;
     transition: .5s ease;
     background-color: grey;
+    border-radius: 5%;
 }
 
 .container:hover .overlay {
