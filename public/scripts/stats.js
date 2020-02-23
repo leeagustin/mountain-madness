@@ -15,8 +15,8 @@ let engineers = 20;
 
 function initializeStats() {
     populationLevel = 1500;
-    foodLevel = 50;
-    waterLevel = 50;
+    foodLevel = 100;
+    waterLevel = 100;
     metalLevel = 0;
     happinessLevel = 100;
     currentEnergyLevel = 1200;
@@ -72,6 +72,14 @@ function updateWater() {
 function updateHappiness() {
     if (requiredEnergyLevel > currentEnergyLevel)
         happinessLevel -= Math.ceil((requiredEnergyLevel - currentEnergyLevel) / 25);
+
+    if (foodLevel >= 50) {
+        happinessLevel += 2;
+    }
+
+    if (waterLevel >= 50) {
+        happinessLevel += 3;
+    }
 
     if (happinessLevel <= 0)
         window.location.href = '/gameover';
