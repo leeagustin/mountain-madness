@@ -6,91 +6,82 @@ body {
 }
 
 div {
-    background: color url("../images/farm.png") others;
-    background-repeat: no-repeat;
-    height: 50%;   
+    margin-left: 5vh;
+    margin-right: 5vh;
 }
 
+div#farm {
+    display: inline-block;
+    position: relative;
+}
 
-div#water{
-    display:inline-block;
-    width: 50vh;
-    height: 50vh;
-    position: absolute;
-	bottom: 0;
-	right: 0;
+div#metal {
+    display: inline-block;
+    position: relative;
+}
+
+div#water {
+    display: inline-block;
+    position: relative;
     /* margin-right: 2%; */
-  }
-
-img#water{
-    width: 30vh;
-    height: 30vh;
 }
 
-div#metal{
-    display: inline-block;
-    width: 50vh;
-    height: 50vh;
-    position: absolute;
-	bottom: 0;
-	left: 0;
-  }
-
-
-head {
-    color: blue;
-}
-
-div#farm{
-    display: inline-block;
-    width: 50vh;
-    height: 50vh;
-    position: absolute;
-	top: 3vh;
-	right: 0;
-}
-
-img#farm{
+img#farm {
+    position: relative;
     width: 40vh;
     height: 20vh;
 }
 
+img#water {
+    position: relative;
+    width: 30vh;
+    height: 30vh;
+}
+
 #myProgress {
     display: inline-block;
-    position: absolute;
+    position: relative;
     width: 40vh;
     height: 2vh;
     background-color: grey;
-    left: 10%;
-  }
-  
+}
+
 #farmBar {
     width: 1%;
     height: 2vh;
     background-color: green;
-  }
+    margin: 0vh;
+}
 
 #metalBar {
     width: 1%;
     height: 2vh;
     background-color: green;
-  }
+    margin: 0vh;
+}
 
 
 #waterBar {
     width: 1%;
     height: 2vh;
     background-color: green;
-  }
+    margin: 0vh;
+}
 
-div#lab{
+div#lab {
     display: inline-block;
     width: 10vh;
     height: 40vh;
-    position: absolute;
-	bottom: 10%;
-	left: 10%;
+    position: relative;
 }
+
+#actions {
+    text-align: center;
+    position: absolute;
+    bottom: 12vh;
+    width: 90%;
+}
+
 /*
 span#myPopup{
     display: inline-block;
