@@ -38,6 +38,7 @@ img {
     left: 0;
     display: inline-flex;
     width: 20%;
+    visibility: hidden;
 }
 
 .alert .tooltiptext {
@@ -55,6 +56,10 @@ img {
   
 .alert:hover .tooltiptext {
     visibility: visible;
+}
+
+.icon_container {
+    text-align: left;
 }
 
 .progressBar {

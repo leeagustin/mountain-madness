@@ -37,15 +37,17 @@
                 <div id="farmProgress" style="color: grey">...</div>
                 
             </div>
-            <div class="container_up" onclick="upgradeFood(); playButtonClick();">
-            <img id=upgradeFood src="images/upgrade.png"><br>
-            <div class="overlay"><div class="text_up">Upgrade</div></div>
+
+            <div class="icon_container">
+                <div class="container_up" onclick="upgradeFood(); playButtonClick();">
+                <img id=upgradeFood src="images/upgrade.png"><br>
+                <div class="overlay"><div class="text_up">Upgrade</div></div>
+                </div>
+                <div class="alert">
+                    <img id="foodSpoilageAlert" src="images/exclamation_mark.png" onclick="fixFoodSpoiling(); playButtonClick();"><br>
+                    <span class="tooltiptext">Fix the Food Spoilage issue. Costs 1 Engineer</span>
+                </div>
             </div>
-            <div class="alert">
-                <img src="images/exclamation_mark.png" onclick="playButtonClick();"><br>
-                <span class="tooltiptext">Fix the Food Spoilage issue. Costs 1 Engineer</span>
-            </div>
-            
         </div>
 
         <div class="action">
@@ -56,9 +58,11 @@
             <div class="progressBar">
                 <div id="metalProgress" style="color: grey">...</div>
             </div>
-            <div class="container_up" onclick="upgradeMetal(); playButtonClick();">
-                    <img id=upgradeMetal src="images/upgrade.png"><br>
-                    <div class="overlay"><div class="text_up">Upgrade</div></div>
+            <div class="icon_container">
+                <div class="container_up" onclick="upgradeMetal(); playButtonClick();">
+                        <img id=upgradeMetal src="images/upgrade.png"><br>
+                        <div class="overlay"><div class="text_up">Upgrade</div></div>
+                </div>
             </div>
         </div>
 
@@ -70,13 +74,15 @@
             <div class="progressBar">
                 <div id="waterProgress" style="color: grey">...</div>
             </div>
-            <div class="container_up" onclick="upgradeWater(); playButtonClick();">
-                <img id=upgradeWater src="images/upgrade.png"><br>
-                <div class="overlay"><div class="text_up">Upgrade</div></div>
-            </div>
-            <div class="alert">
-                <img src="images/exclamation_mark.png" onclick="playButtonClick();"><br>
-                <span class="tooltiptext">Fix the Water Leakage issue. Costs 1 Engineer</span>
+            <div class="icon_container">
+                <div class="container_up" onclick="upgradeWater(); playButtonClick();">
+                    <img id=upgradeWater src="images/upgrade.png"><br>
+                    <div class="overlay"><div class="text_up">Upgrade</div></div>
+                </div>
+                <div id="waterLeakageAlert" class="alert">
+                    <img src="images/exclamation_mark.png" onclick="fixWaterLeakage(); playButtonClick();"><br>
+                    <span class="tooltiptext">Fix the Water Leakage issue. Costs 1 Engineer</span>
+                </div>
             </div>
         </div>
     </div>
