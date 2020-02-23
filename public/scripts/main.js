@@ -22,7 +22,9 @@ function create() {
     // buttons
     const foodButton = this.add.text(WINDOW_WIDTH - 300, 52, 'Food', {
         font: '20px Arial',
-        fill: '#00cc66'
+        fill: '#009900',
+        backgroundColor: 'green',
+        bo
     });
     foodButton.setInteractive();
     foodButton.on('pointerdown', () => {
@@ -31,7 +33,8 @@ function create() {
 
     const waterButton = this.add.text(WINDOW_WIDTH - 300, 31, 'Water', {
         font: '20px Arial',
-        fill: '#0033cc'
+        fill: '#00ffff',
+        backgroundColor: ' blue'
     });
     waterButton.setInteractive();
     waterButton.on('pointerdown', () => {
@@ -40,7 +43,8 @@ function create() {
 
     const metalButton = this.add.text(WINDOW_WIDTH - 300, 73, 'Metal', {
         font: '20px Arial',
-        fill: '#666699'
+        fill: 'black',
+        backgroundColor: 'white'
     });
     metalButton.setInteractive();
     metalButton.on('pointerdown', () => {
