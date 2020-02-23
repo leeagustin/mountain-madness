@@ -36,7 +36,7 @@ function updateStats() {
 }
 
 function updatePopulation() {
-    populationLevel += Math.floor(populationLevel / 250);
+    populationLevel += Math.floor(populationLevel / 150);
 
     if (foodLevel <= 0) {
         let dead = Math.floor(populationLevel / 125);
