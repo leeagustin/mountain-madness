@@ -6,10 +6,10 @@ let timesWaterUpgraded = 0;
 let timesEnergyUpgraded = 0;
 
 function upgradeFoodHarvest () {
-    var upgradeCost = engineerCost[timesFoodUpgraded];
+    var engineerUpgradeCost = engineerCost[timesFoodUpgraded];
 
-    if (engineers >= upgradeCost && timesFoodUpgraded <= maxUpgradeLevel) {
-        engineers -= upgradeCost;
+    if (engineers >= engineerUpgradeCost && timesFoodUpgraded <= maxUpgradeLevel) {
+        engineers -= engineerUpgradeCost;
         foodHarvestingRate *= 2;
     }
 
@@ -17,10 +17,10 @@ function upgradeFoodHarvest () {
 }
 
 function upgradeWaterHarvest () {
-    var upgradeCost = engineerCost[timesWaterUpgraded];
+    var engineerUpgradeCost = engineerCost[timesWaterUpgraded];
 
-    if (engineers >= upgradeCost && timesWaterUpgraded <= maxUpgradeLevel) {
-        engineers -= upgradeCost;
+    if (engineers >= engineerUpgradeCost && timesWaterUpgraded <= maxUpgradeLevel) {
+        engineers -= engineerUpgradeCost;
         waterHarvestingRate *= 2;
     }
 
@@ -28,10 +28,10 @@ function upgradeWaterHarvest () {
 }
 
 function upgradeEnergyHarvest () {
-    var upgradeCost = engineerCost[timesEnergyUpgraded];
+    var engineerUpgradeCost = engineerCost[timesEnergyUpgraded];
 
-    if (engineers >= upgradeCost && timesEnergyUpgraded <= maxUpgradeLevel) {
-        engineers -= upgradeCost;
+    if (engineers >= engineerUpgradeCost && timesEnergyUpgraded <= maxUpgradeLevel) {
+        engineers -= engineerUpgradeCost;
         energyHarvestingRate *= 2;
     }
 
