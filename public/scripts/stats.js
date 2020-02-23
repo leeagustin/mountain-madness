@@ -4,22 +4,22 @@ let waterLevel;
 let happinessLevel;
 let currentEnergyLevel;
 let requiredEnergyLevel;
-let metalLevel;
+let metalLevel = 2000;
 let foodRateModifier = 1;
 let waterRateModifier = 1;
 
-let engineers;
+let engineers = 20;
 let scientists;
 
 function initializeStats() {
     populationLevel = 1000;
     foodLevel = 50;
     waterLevel = 50;
-    metalLevel = 0;
+    metalLevel = 400;
     happinessLevel = 100;
     currentEnergyLevel = 1200;
     requiredEnergyLevel = 900;
-    engineers = 0;
+    engineers = 20;
     scientists = 0;
 
     updateStats();
