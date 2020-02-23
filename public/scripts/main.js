@@ -20,6 +20,9 @@ function preload() {}
 
 function create() {
     initializeStats();
+    initializeRandomEventGenerator();
+    createEngineer();
+
     // buttons
     const foodButton = this.add.text(170, 52, 'Food', {
         font: '20px Arial',
@@ -45,7 +48,7 @@ function create() {
     });
     metalButton.setInteractive();
     metalButton.on('pointerdown', () => {
-        setTimeout(harvestMetal, 3000);
+        harvestMetal();
     });
 
 
@@ -62,5 +65,5 @@ function create() {
 
 function update() {
     createRandomEvent();
-    statsTextbox.setText(`Population: ${populationLevel}\nWater: ${waterLevel}\nFood: ${foodLevel}\nMetal: ${metalLevel}\nHappiness: ${happinessLevel}\nCurrent Energy: ${currentEnergyLevel}\nRequired Energy: ${requiredEnergyLevel}`);
+    statsTextbox.setText(`Population: ${populationLevel} (Engineers: ${engineers})\nWater: ${waterLevel}\nFood: ${foodLevel}\nMetal: ${metalLevel}\nHappiness: ${happinessLevel}\nCurrent Energy: ${currentEnergyLevel}\nRequired Energy: ${requiredEnergyLevel}`);
 }
