@@ -34,6 +34,29 @@ img {
     margin-right: 5%;
 }
 
+.alert {
+    left: 0;
+    display: inline-flex;
+    width: 20%;
+}
+
+.alert .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+   
+    position: absolute;
+    z-index: 1;
+}
+  
+.alert:hover .tooltiptext {
+    visibility: visible;
+}
+
 .progressBar {
     display: inline-block;
     position: relative;
@@ -113,6 +136,8 @@ p#label {
   }
 
 .container_up {
+    left: 0;
+    display: inline-flex;
     position: relative;
     width: 10vh;
     height: 10vh;
