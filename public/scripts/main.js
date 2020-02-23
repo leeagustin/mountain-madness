@@ -52,13 +52,13 @@ function create() {
         fill: "red"
     });
 
-    timerTextbox = this.add.text(WINDOW_WIDTH * 0.85, WINDOW_HEIGHT * 0.05, '', {
+    timerTextbox = this.add.text(WINDOW_WIDTH * 0.80, WINDOW_HEIGHT * 0.05, '', {
         font: WINDOW_HEIGHT * 0.045 + 'px sans-serif',
         fill: "#FFFFFF"
     });
 
-    eventsTextbox = this.add.text(WINDOW_WIDTH * 0.6, WINDOW_HEIGHT / 2, '', {
-        font: WINDOW_HEIGHT * 0.08 + 'px sans-serif',
+    eventsTextbox = this.add.text(WINDOW_WIDTH * 0.5, WINDOW_HEIGHT / 2, '', {
+        font: WINDOW_HEIGHT * 0.06 + 'px sans-serif',
         fill: '#FFFFFF',
         backgroundColor: '#18181A'
     }).setOrigin(0.5).setPadding();
