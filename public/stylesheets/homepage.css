@@ -96,7 +96,6 @@ p#label {
     opacity: 0.75;
   }
 
-<<<<<<< HEAD
 .container_up:hover .overlay {
     opacity: 0.75;
   }
@@ -130,15 +129,4 @@ p#label {
     transform: translate(-50%, -50%);
     text-align: center;
   }
-/*
-span#myPopup{
-    display: inline-block;
-    width: 40vh;
-    height: 30vh;
-    position: absolute;
-	bottom: 10%;
-	left: 10%;
-  }
-=======
->>>>>>> 7e578df0c98e44b2b65bea0f964d50ce20678c09
 
