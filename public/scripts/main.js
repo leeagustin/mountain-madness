@@ -31,23 +31,13 @@ function create() {
     });
 
     waterTextbox = this.add.text(170, 60, ' ', {
-<<<<<<< HEAD
-        font: WINDOW_HEIGHT * 0.045 + 'px sans-serif',
-=======
-<<<<<<< HEAD
-        font: WINDOW_HEIGHT * 0.045 + 'px sans-serif',
-        fill: "green"
+        font: WINDOW_HEIGHT * 0.045 + 'px sans-serif'
     }); 
     
     waterWarningbox = this.add.text(165, 60, ' ', {
         font: WINDOW_HEIGHT * 0.045 + 'px sans-serif',
         fill: "red"
-    }); 
-=======
-        font: WINDOW_HEIGHT * 0.045 + 'px sans-serif'
->>>>>>> e45fbb1ede6c296e307ce43d17f4a203fc6badfc
     });
->>>>>>> b047dd5697b42e78bf6854f868207aa2ef2aa200
 
     metalTextbox = this.add.text(170, 122, ' ', {
         font: WINDOW_HEIGHT * 0.045 + 'px sans-serif',
