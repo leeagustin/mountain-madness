@@ -15,18 +15,29 @@ div{
     
 }
 
+
 img#farm{
     display: block;
-    width: 50vh;
+    width: 30%;
     height: 40vh;
+    margin-top: 2%;
+    margin-left: auto;
+    margin-right: 2%;
+  }
+
+img#water{
+    display: block;
+    width: 40vh;
+    height: 40vh;
+    margin-bottom: 2%;
     margin-left: auto;
     margin-right: 2%;
   }
 
 img#energy{
     display: block;
-    width: 40vh;
-    height: 20vh;
+    width: 50vh;
+    height: 40vh;
     margin-left: 2%;
     margin-right: auto;
   }
