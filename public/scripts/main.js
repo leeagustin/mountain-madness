@@ -36,6 +36,15 @@ function create() {
     createEngineer();
 }
 
+function displayAnnouncement(msg) {
+    eventsTextBox.setText('msg');
+    oneUpSound.loop = false;
+    oneUpSound.play();
+    setTimeout(() => {
+        eventsTextBox.setText('');
+    }, 3000);
+}
+
 function updateEveryFrame() {
     statsTextbox.setText(
         'Population: ' + populationLevel + ' (Engineers: ' + engineers + ')\n' +
