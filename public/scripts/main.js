@@ -35,7 +35,6 @@ function create() {
     });
 
     waterTextbox = this.add.text(170, 60, ' ', {
-<<<<<<< HEAD
         font: WINDOW_HEIGHT * 0.045 + 'px sans-serif',
         fill: "green"
     }); 
@@ -44,10 +43,6 @@ function create() {
         font: WINDOW_HEIGHT * 0.045 + 'px sans-serif',
         fill: "red"
     }); 
-=======
-        font: WINDOW_HEIGHT * 0.045 + 'px sans-serif'
-    });
->>>>>>> b047dd5697b42e78bf6854f868207aa2ef2aa200
 
     metalTextbox = this.add.text(170, 122, ' ', {
         font: WINDOW_HEIGHT * 0.045 + 'px sans-serif'
