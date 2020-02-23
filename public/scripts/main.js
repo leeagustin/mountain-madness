@@ -30,15 +30,15 @@ function create() {
         fill: "#FFFFFF"
     });
 
-    waterTextbox = this.add.text(WINDOW_HEIGHT * 0.25, WINDOW_HEIGHT * 0.094, ' ', {
+    waterTextbox = this.add.text(WINDOW_HEIGHT * 0.3, WINDOW_HEIGHT * 0.094, ' ', {
         font: WINDOW_HEIGHT * 0.045 + 'px sans-serif'
     });
 
-    metalTextbox = this.add.text(WINDOW_HEIGHT * 0.215, WINDOW_HEIGHT * 0.193, ' ', {
+    metalTextbox = this.add.text(WINDOW_HEIGHT * 0.27, WINDOW_HEIGHT * 0.193, ' ', {
         font: WINDOW_HEIGHT * 0.045 + 'px sans-serif',
     });
 
-    foodTextbox = this.add.text(WINDOW_HEIGHT * 0.23, WINDOW_HEIGHT * 0.143, ' ', {
+    foodTextbox = this.add.text(WINDOW_HEIGHT * 0.28, WINDOW_HEIGHT * 0.143, ' ', {
         font: WINDOW_HEIGHT * 0.045 + 'px sans-serif',
     });
 
